@@ -1,0 +1,28 @@
+.parallax{
+  position: relative;
+  background-image: url("/frontpage.png");
+  height: 100vh;
+  width: 100vw;
+
+  background-attachment: fixed;
+  background-position: center 55%;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scrollText {
+  position: absolute;
+  bottom: 20%;
+  font-size: 10vw;
+  color: white;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+  transition: transform 0.2s ease-out;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
