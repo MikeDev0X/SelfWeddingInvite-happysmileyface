@@ -2,7 +2,7 @@
   position: fixed;
   width: 100vw;
   height: 100svh;
-  min-height: calc(var(--real-vh, 1vh) * 100 + 10em);
+  min-height: calc(var(--real-vh, 1vh) * 100 + 5em);
   z-index: -1;
   overflow: hidden;
 }
@@ -20,14 +20,23 @@
 
 .bgFrontpage { background-image: url("/frontpage.png"); }
 .bgInvitation { background-image: url("/classy_background.png"); }
+.bgItinerary { background-image: url("/itinerary_background.png"); }
 
 .bgWrapper[data-scene="frontpage"] .bgFrontpage { opacity: 1; }
 .bgWrapper[data-scene="frontpage"] .bgInvitation { opacity: 0; }
+.bgWrapper[data-scene="frontpage"] .bgItinerary { opacity: 0; }
+
 .bgWrapper[data-scene="invitation"] .bgFrontpage { opacity: 0; }
 .bgWrapper[data-scene="invitation"] .bgInvitation { opacity: 1; }
+.bgWrapper[data-scene="invitation"] .bgItinerary  { opacity: 0; }
+
+.bgWrapper[data-scene="itinerary"] .bgFrontpage { opacity: 0; }
+.bgWrapper[data-scene="itinerary"] .bgInvitation { opacity: 0; }
+.bgWrapper[data-scene="itinerary"] .bgItinerary  { opacity: 1; }
 
 .parallax,
-.parallaxInvitation {
+.parallaxInvitation,
+.parallaxItinerary{
   position: relative;
   height: 100vh;
   height: 100svh;
@@ -49,6 +58,15 @@
   font-size: 10vw;
   color: white;
   text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+  transition: transform 0.8s ease-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.scrollItinerary{
+  position: absolute;
+  top: 0;
   transition: transform 0.8s ease-out;
   display: flex;
   flex-direction: column;

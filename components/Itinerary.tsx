@@ -1,0 +1,107 @@
+import itinStyle from './ItineraryStyle.module.css';
+const Itinerary = () =>{
+
+
+return(
+    <>
+        <div className={itinStyle.mainContainer}>
+            <span 
+                className={itinStyle.mainTitle}
+                style = {{fontSize:'1.4em'}}>
+                    Itinerario
+            </span>
+            <div className={itinStyle.mainWrap}>
+                <div className={itinStyle.linesContainer}> {/*lines and dots* */}
+                    <br />
+                    <div className={itinStyle.dot}> 
+                        {/*dot* */}
+                    </div>
+                    <div className={itinStyle.line}>
+                        {/*line* */}
+                    </div>
+                    <div className={itinStyle.dot}> 
+                        {/*dot* */}
+                    </div>
+                    <div className={itinStyle.line}>
+                        {/*line* */}
+                    </div><div className={itinStyle.dot}> 
+                        {/*dot* */}
+                    </div>
+                    <div className={itinStyle.line}>
+                        {/*line* */}
+                    </div><div className={itinStyle.dot}> 
+                        {/*dot* */}
+                    </div>
+                    <div className={itinStyle.line}>
+                        {/*line* */}
+                    </div><div className={itinStyle.dot}> 
+                        {/*dot* */}
+                    </div>
+                    <br /><br />
+                </div>
+                <div> {/**images and text */}
+                    <div className={itinStyle.imgInfoContainer}>
+                        <img src="/glass.png" alt="glass image" className={itinStyle.iconStyle}/>
+                        <div className={itinStyle.infoContainer}>
+                            <div className={itinStyle.title}>Recepción</div>
+                            <div className={itinStyle.subtitle}>
+                                Coctél de bienvenida
+                                <br />
+                                4:00 PM
+                            </div>
+                        </div>
+                    </div>
+                    <div className={itinStyle.imgInfoContainer}>
+                        <img src="/rings.png" alt="rings image" className={itinStyle.iconStyle}/>
+                        <div className={itinStyle.infoContainer}>
+                            <div className={itinStyle.title}>Ceremonia</div>
+                            <div className={itinStyle.subtitle}>
+                                Jardín Rosa Zafiro
+                                <br />
+                                5:00 PM
+                            </div>
+                        </div>
+                    </div>
+                    <div className={itinStyle.imgInfoContainer}>
+                        <img src="/menu.png" alt="menu image" className={itinStyle.iconStyle}/>
+                        <div className={itinStyle.infoContainer}>
+                            <div className={itinStyle.title}>Cena</div>
+                            <div className={itinStyle.subtitle}>
+                                Banquete de tres tiempos
+                                <br />
+                                6:30 PM
+                            </div>
+                        </div>
+                    </div>
+                    <div className={itinStyle.imgInfoContainer}>
+                        <img src="/party.png" alt="party image" className={itinStyle.iconStyle}/>
+                        <div className={itinStyle.infoContainer}>
+                            <div className={itinStyle.title}>Celebración</div>
+                            <div className={itinStyle.subtitle}>
+                                Let's party
+                                <br />
+                                8:00 PM
+                            </div>
+                        </div>
+                    </div>
+                    <div className={itinStyle.imgInfoContainer}>
+                        <img src="/cake.png" alt="cake image" className={itinStyle.iconStyle}/>
+                        <div className={itinStyle.infoContainer}>
+                            <div className={itinStyle.title}>Pastel</div>
+                            <div className={itinStyle.subtitle}>
+                                Corte del pastel
+                                <br />
+                                10:00 PM
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </>
+)
+
+}
+
+export default Itinerary;
