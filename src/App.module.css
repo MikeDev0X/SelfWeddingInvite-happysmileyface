@@ -1,39 +1,84 @@
-.parallax{ 
-  position: relative; 
-  background-image: url("/frontpage.png"); 
-  height: 100dvh; 
-  width: 100dvw; 
-  background-attachment: fixed; 
-  background-position: center 55%; 
-  background-repeat: no-repeat; 
-  background-size: cover; 
-  display: flex; 
-  align-items: center; 
-  justify-content: center; 
-} 
+.bgWrapper {
+  position: fixed;
+  width: 100vw;
+  height: 100svh;
+  min-height: calc(var(--real-vh, 1vh) * 100 + 10em);
+  z-index: -1;
+  overflow: hidden;
+}
 
-.parallaxInvitation{ 
-  position: relative; 
-  background-image: url("/classy_background.png"); 
-  height: 100dvh; 
-  width: 100vw; 
-  background-attachment: fixed; 
-  background-position: center 55%; 
-  background-repeat: no-repeat; 
-  background-size: cover; 
-  display: flex; 
-  align-items: center; 
-  justify-content: center; 
-} 
-  
-.scrollText { 
-  position: absolute; 
-  bottom: 20%; 
+.bgLayer {
+  position: absolute;
+  inset: 0;
+  background-position: center 55%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0;
+  transition: opacity 350ms ease;
+  will-change: opacity;
+}
+
+.bgFrontpage { background-image: url("/frontpage.png"); }
+.bgInvitation { background-image: url("/classy_background.png"); }
+
+.bgWrapper[data-scene="frontpage"] .bgFrontpage { opacity: 1; }
+.bgWrapper[data-scene="frontpage"] .bgInvitation { opacity: 0; }
+.bgWrapper[data-scene="invitation"] .bgFrontpage { opacity: 0; }
+.bgWrapper[data-scene="invitation"] .bgInvitation { opacity: 1; }
+
+.parallax,
+.parallaxInvitation {
+  position: relative;
+  height: 100vh;
+  height: 100svh;
+  height: calc(var(--real-vh, 1vh) * 100);
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.parallaxInvitation{
+  padding-top: 3em;
+}
+
+.scrollText {
+  position: absolute;
+  bottom: 15%;
   font-size: 10vw;
-  color: white; 
-  text-shadow: 2px 2px 8px rgba(0,0,0,0.8); 
-  transition: transform 0.2s ease-out; 
-  display: flex; 
-  flex-direction: column; 
-  align-items: center; 
+  color: white;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+  transition: transform 0.8s ease-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.invitationImg1{
+  position: absolute;
+  width:20em;
+  height: auto;
+  top: 30%;
+  left: 40%;
+  transform: translate(-60%, -50%);
+  z-index: 1;
+}
+.invitationImg2{
+  position: absolute;
+  width: 4em;
+  height: auto;
+  top: 30%;
+  left: 40%;
+  transform: translate(-175%, -150%);
+  z-index: 3;
+}
+.invitationImg3{
+  position: absolute;
+  width: 30em;
+  height: 100%;
+  top: 30%;
+  left: 40%;
+  transform: translate(-35%, -10%);
+  z-index: 2;
 }
