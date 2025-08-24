@@ -1,4 +1,6 @@
 import giftStyle from './GiftsTable.module.css';
+import liverpoolImg from '../public/liverpool_icon.png';
+import giftImage    from '../public/gift.png';
 
 const GiftsTable = () =>{
 
@@ -26,7 +28,7 @@ const GiftsTable = () =>{
                 <span className={giftStyle.subtitle}>Mesa de regalos Liverpool</span>
 
                 <div className={giftStyle.liverpoolContainer}>
-                    <img   src="/liverpool_icon.png" 
+                    <img   src={liverpoolImg} 
                            alt="liverpool image" 
                            style={{width:'4em'}}  
                             />
@@ -35,7 +37,7 @@ const GiftsTable = () =>{
                     </div>
                 </div>
                 <br />
-                <img    src="/gift.png" 
+                <img    src={giftImage}
                         alt="gift image" 
                         style={{width:'5em'}}/>
             

@@ -1,6 +1,12 @@
 import itinStyle from './ItineraryStyle.module.css';
-const Itinerary = () =>{
+//Images
+import glassImg from '../public/glass.png';
+import ringsImg from '../public/rings.png';
+import menuImg  from '../public/menu.png';
+import partyImg from '../public/party.png';
+import cakeImg  from '../public/cake.png';
 
+const Itinerary = () =>{
 
 return(
     <>
@@ -41,7 +47,7 @@ return(
                 </div>
                 <div> {/**images and text */}
                     <div className={itinStyle.imgInfoContainer}>
-                        <img src="/glass.png" alt="glass image" className={itinStyle.iconStyle}/>
+                        <img src={glassImg} alt="glass image" className={itinStyle.iconStyle}/>
                         <div className={itinStyle.infoContainer}>
                             <div className={itinStyle.title}>Recepción</div>
                             <div className={itinStyle.subtitle}>
@@ -52,7 +58,7 @@ return(
                         </div>
                     </div>
                     <div className={itinStyle.imgInfoContainer}>
-                        <img src="/rings.png" alt="rings image" className={itinStyle.iconStyle}/>
+                        <img src={ringsImg} alt="rings image" className={itinStyle.iconStyle}/>
                         <div className={itinStyle.infoContainer}>
                             <div className={itinStyle.title}>Ceremonia</div>
                             <div className={itinStyle.subtitle}>
@@ -63,7 +69,7 @@ return(
                         </div>
                     </div>
                     <div className={itinStyle.imgInfoContainer}>
-                        <img src="/menu.png" alt="menu image" className={itinStyle.iconStyle}/>
+                        <img src={menuImg} alt="menu image" className={itinStyle.iconStyle}/>
                         <div className={itinStyle.infoContainer}>
                             <div className={itinStyle.title}>Cena</div>
                             <div className={itinStyle.subtitle}>
@@ -74,7 +80,7 @@ return(
                         </div>
                     </div>
                     <div className={itinStyle.imgInfoContainer}>
-                        <img src="/party.png" alt="party image" className={itinStyle.iconStyle}/>
+                        <img src={partyImg} alt="party image" className={itinStyle.iconStyle}/>
                         <div className={itinStyle.infoContainer}>
                             <div className={itinStyle.title}>Celebración</div>
                             <div className={itinStyle.subtitle}>
@@ -85,7 +91,7 @@ return(
                         </div>
                     </div>
                     <div className={itinStyle.imgInfoContainer}>
-                        <img src="/cake.png" alt="cake image" className={itinStyle.iconStyle}/>
+                        <img src={cakeImg} alt="cake image" className={itinStyle.iconStyle}/>
                         <div className={itinStyle.infoContainer}>
                             <div className={itinStyle.title}>Pastel</div>
                             <div className={itinStyle.subtitle}>

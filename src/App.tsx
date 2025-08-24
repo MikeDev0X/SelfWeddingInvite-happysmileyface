@@ -7,6 +7,11 @@ import GiftsTable from "../components/GiftsTable";
 import useSound from "use-sound";
 import mainTrack from '../src/assets/soundtracks/mainSoundtrack.mp3';
 
+//Images
+import envelopeImg from '../public/envelope.png';
+import stampImg from '../public/stamp.png';
+
+
 const App = () => {
     const [started, setStarted] = useState<boolean>(false);
     const [play] = useSound(mainTrack, {
@@ -95,8 +100,8 @@ const App = () => {
 
           <div ref={invitationRef} className={appStyle.parallaxInvitation}>
             <div>
-              <img src="/envelope.png" alt="envelope image"  className={appStyle.invitationImg1} />
-              <img src="/stamp.png" alt="stamp image"  className={appStyle.invitationImg2} />
+              <img src={envelopeImg} alt="envelope image"  className={appStyle.invitationImg1} />
+              <img src={stampImg} alt="stamp image"  className={appStyle.invitationImg2} />
               <div className={appStyle.invitationImg3}>
                 <Invitation/>
               </div>
