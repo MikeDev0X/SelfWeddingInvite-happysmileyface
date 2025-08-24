@@ -53,7 +53,8 @@
 }
 
 .parallaxCountdown,
-.parallaxVersicle{
+.parallaxVersicle,
+.parallaxGifts{
   position: relative; 
   background-attachment: fixed; 
   background-position: center 55%; 
@@ -77,6 +78,13 @@
   width: 100dvw; 
 }
 
+.parallaxGifts{
+  background-image: url("/gifts_Table_background.png"); 
+  background-position: 50%;
+  height: 100dvh; 
+  width: 100dvw; 
+}
+
 .scrollText {
   position: absolute;
   bottom: 15%;
@@ -90,13 +98,24 @@
 }
 
 .scrollElements{
-  position: absolute;
+  /*position: absolute;
   top: 0;
   transition: transform 0.8s ease-out;
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 30vh;
+  height: 30vh;*/
+
+  
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transition: transform 0.8s ease-out;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .invitationImg1{
@@ -153,4 +172,14 @@
   font-size: 1.3em;
   text-align: center;
   color: white;
+}
+
+.scrollConventionalParallax{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

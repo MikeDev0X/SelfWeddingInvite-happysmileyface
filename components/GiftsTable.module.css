@@ -1,0 +1,55 @@
+.mainContainer{
+    position : absolute;
+    width : 20rem;
+    height : 30rem;
+    background-image : url("/gifts_table_paper.png");
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color:      #65563e;
+}
+
+
+.mainTitle{
+    width: 80%;
+    text-align : center;
+    font-family: newiconscript;
+}
+
+.subtitle{
+    font-size: 0.9em;
+    width: 85%;
+    font-family: texgyrebonum;
+}
+
+.liverpoolContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    align-items: center;
+    width: 70%;
+}
+
+.liverpoolButton{
+    width: 4em;
+    height: 1em;
+    border: 1px solid #65563e;
+    cursor: pointer;
+}
+
+.liverpoolButton:hover{
+    background-color: #65563e;
+    color:beige;
+}
+
+.buttonText{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.5em;
+    font-family: texgyrebonum;
+}

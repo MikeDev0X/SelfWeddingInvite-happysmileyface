@@ -3,6 +3,7 @@ import appStyle from "./App.module.css";
 import Invitation from '../components/Invitation';
 import Itinerary from '../components/Itinerary';
 import Countdown from '../components/Countdown';
+import GiftsTable from "../components/GiftsTable";
 import useSound from "use-sound";
 import mainTrack from '../src/assets/soundtracks/mainSoundtrack.mp3';
 
@@ -124,6 +125,12 @@ const App = () => {
             <br/>
             1 Corintios 13:7-8
           </span>
+        </div>
+      </div>
+
+      <div className={appStyle.parallaxGifts}>
+        <div className={appStyle.scrollConventionalParallax}>
+          <GiftsTable/>
         </div>
       </div>
 
