@@ -1,22 +1,50 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import appStyle from "./App.module.css";
 import Invitation from '../components/Invitation';
 import Itinerary from '../components/Itinerary';
 import Countdown from '../components/Countdown';
+import useSound from "use-sound";
+import mainTrack from '../src/assets/soundtracks/mainSoundtrack.mp3';
 
-export default function ParallaxPage() {
+const App = () => {
+    const [started, setStarted] = useState<boolean>(false);
+    const [play] = useSound(mainTrack, {
+        volume: 1,
+        playbackRate: 1,
+        loop : true
+    });
+
+  useEffect(() => {
+    //music trigger when scrolled
+    const handleScroll = () => {
+      if (!started) {
+        play();
+        setStarted(true);
+        window.removeEventListener("scroll", handleScroll);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+    console.log('hola');
+  }, [play, started]);
+
   const invitationRef = useRef<HTMLDivElement>(null);
   const frontpageRef  = useRef<HTMLDivElement>(null);
   const itineraryRef  = useRef<HTMLDivElement>(null);
 
-
   useEffect(() => {
+    //calculate view height
     const vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty("--real-vh", `${vh}px`);
   }, []);
 
   const bgWrapperRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
+    //update background with animation effect
     const wrapper = bgWrapperRef.current;
     const invitation = invitationRef.current;
     const frontpage = frontpageRef.current;
@@ -48,6 +76,7 @@ export default function ParallaxPage() {
 
   return (
     <>
+
       <div ref={bgWrapperRef} className={appStyle.bgWrapper} data-scene="frontpage">
         <div className={`${appStyle.bgLayer} ${appStyle.bgFrontpage}`} />
         <div className={`${appStyle.bgLayer} ${appStyle.bgInvitation}`} />
@@ -87,6 +116,19 @@ export default function ParallaxPage() {
         </div>
       </div>
 
+      <div className={appStyle.parallaxVersicle}>
+        <div className={appStyle.versicleContainer}>
+          <span className={appStyle.versicleHeader}>
+            “Todo lo sufre, todo lo cree, todo lo espera, todo lo soporta. El amor nunca deja de ser” </span>
+          <span className={appStyle.versicleHeader}>
+            <br/>
+            1 Corintios 13:7-8
+          </span>
+        </div>
+      </div>
+
     </>
   );
 }
+
+export default App;

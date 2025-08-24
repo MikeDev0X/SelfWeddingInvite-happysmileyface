@@ -52,11 +52,9 @@
   padding-top: 3em;
 }
 
-.parallaxCountdown{
+.parallaxCountdown,
+.parallaxVersicle{
   position: relative; 
-  background-image: url("/countdown_background.png"); 
-  height: 30dvh; 
-  width: 100dvw; 
   background-attachment: fixed; 
   background-position: center 55%; 
   background-repeat: no-repeat; 
@@ -64,9 +62,20 @@
   display: flex; 
   align-items: center; 
   justify-content: center;
-
 }
 
+.parallaxCountdown{
+  background-image: url("/countdown_background.png"); 
+  height: 30dvh; 
+  width: 100dvw; 
+}
+
+.parallaxVersicle{
+  background-image: url("/versicle_background.png"); 
+  background-position: 50%;
+  height: 70dvh; 
+  width: 100dvw; 
+}
 
 .scrollText {
   position: absolute;
@@ -123,6 +132,25 @@
   justify-content: center;
   align-items:end;
   font-family: newiconscript;
-  font-size: 1.5em;
+  font-size: 1.8em;
   height: 10dvh;
+  color: black;
+}
+
+.versicleContainer{
+  position: absolute;
+  bottom: 15%;
+  width: 80dvw;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+  transition: transform 0.8s ease-out;
+}
+
+.versicleHeader{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: texgyrebonum;
+  font-size: 1.3em;
+  text-align: center;
+  color: white;
 }
