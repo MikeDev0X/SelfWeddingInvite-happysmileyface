@@ -82,6 +82,7 @@ export default function ParallaxPage() {
       
       <div className={appStyle.parallaxCountdown}>
         <div className={appStyle.scrollElements}>
+          <span className={appStyle.countdownHeader}>Cada vez falta menos</span>
           <Countdown/>
         </div>
       </div>
