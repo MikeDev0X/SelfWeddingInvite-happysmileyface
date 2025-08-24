@@ -2,6 +2,7 @@ import { useEffect, useRef } from "react";
 import appStyle from "./App.module.css";
 import Invitation from '../components/Invitation';
 import Itinerary from '../components/Itinerary';
+import Countdown from '../components/Countdown';
 
 export default function ParallaxPage() {
   const invitationRef = useRef<HTMLDivElement>(null);
@@ -65,7 +66,7 @@ export default function ParallaxPage() {
       <div ref={invitationRef} className={appStyle.parallaxInvitation}>
         <div>
           <img src="/envelope.png" alt="envelope image"  className={appStyle.invitationImg1} />
-          <img src="/stamp.png" alt="envelope image"  className={appStyle.invitationImg2} />
+          <img src="/stamp.png" alt="stamp image"  className={appStyle.invitationImg2} />
           <div className={appStyle.invitationImg3}>
             <Invitation/>
           </div>
@@ -73,10 +74,18 @@ export default function ParallaxPage() {
       </div>
 
       <div ref={itineraryRef} className={appStyle.parallaxItinerary}>
-        <div className={appStyle.scrollItinerary}> 
+        <div className={appStyle.scrollElements}> 
           <Itinerary/>
         </div>
       </div>
+
+      
+      <div className={appStyle.parallaxCountdown}>
+        <div className={appStyle.scrollElements}>
+          <Countdown/>
+        </div>
+      </div>
+
     </>
   );
 }

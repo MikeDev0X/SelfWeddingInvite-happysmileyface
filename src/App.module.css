@@ -52,6 +52,22 @@
   padding-top: 3em;
 }
 
+.parallaxCountdown{
+  position: relative; 
+  background-image: url("/countdown_background.png"); 
+  height: 30dvh; 
+  width: 100dvw; 
+  background-attachment: fixed; 
+  background-position: center 55%; 
+  background-repeat: no-repeat; 
+  background-size: cover; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+
+}
+
+
 .scrollText {
   position: absolute;
   bottom: 15%;
@@ -64,7 +80,7 @@
   align-items: center;
 }
 
-.scrollItinerary{
+.scrollElements{
   position: absolute;
   top: 0;
   transition: transform 0.8s ease-out;

@@ -1,0 +1,28 @@
+.mainContainer{
+    display: flex;
+    flex-direction: row;
+    width: 80dvw;
+    justify-content: space-between;
+    align-items: center;
+    height: 30vh;
+
+    font-family:texgyrebonum;
+    font-size:0.7em;
+}
+
+.timeFormat{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+}
+
+.number {
+  font-size: 1.5em;
+  line-height: 1.5;
+}
+
+.label {
+  font-size: 0.7em;
+}
