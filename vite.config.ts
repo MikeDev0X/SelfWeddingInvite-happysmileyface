@@ -5,7 +5,7 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   assetsInclude: ['**/*.mp3'],
-  base: '/SelfWeddingInvite-happysmileyface',
+  base: '/SelfWeddingInvite-happysmileyface/',
   build: {
     outDir:'dist',
   },
