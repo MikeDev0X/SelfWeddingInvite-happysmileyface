@@ -78,61 +78,61 @@ const App = () => {
   return (
     <>
 
-      <div ref={bgWrapperRef} className={appStyle.bgWrapper} data-scene="frontpage">
-        <div className={`${appStyle.bgLayer} ${appStyle.bgFrontpage}`} />
-        <div className={`${appStyle.bgLayer} ${appStyle.bgInvitation}`} />
-        <div className={`${appStyle.bgLayer} ${appStyle.bgItinerary}`} />
-      </div>
-
-      <div ref={frontpageRef} className={appStyle.parallax}>
-        <div className={appStyle.scrollText}>
-          <span style={{ fontFamily: "newiconscript" }}>Miguel & Elisua</span>
-          <span style={{ fontFamily: "texgyrebonum", fontSize: "0.5em" }}>
-            14 de diciembre del 2025
-          </span>
-        </div>
-      </div>
-
-      <div ref={invitationRef} className={appStyle.parallaxInvitation}>
-        <div>
-          <img src="/envelope.png" alt="envelope image"  className={appStyle.invitationImg1} />
-          <img src="/stamp.png" alt="stamp image"  className={appStyle.invitationImg2} />
-          <div className={appStyle.invitationImg3}>
-            <Invitation/>
+          <div ref={bgWrapperRef} className={appStyle.bgWrapper} data-scene="frontpage">
+            <div className={`${appStyle.bgLayer} ${appStyle.bgFrontpage}`} />
+            <div className={`${appStyle.bgLayer} ${appStyle.bgInvitation}`} />
+            <div className={`${appStyle.bgLayer} ${appStyle.bgItinerary}`} />
           </div>
-        </div>
-      </div>
 
-      <div ref={itineraryRef} className={appStyle.parallaxItinerary}>
-        <div className={appStyle.scrollElements}> 
-          <Itinerary/>
-        </div>
-      </div>
+          <div ref={frontpageRef} className={appStyle.parallax}>
+            <div className={appStyle.scrollText}>
+              <span style={{ fontFamily: "newiconscript" }}>Miguel & Elisua</span>
+              <span style={{ fontFamily: "texgyrebonum", fontSize: "0.5em" }}>
+                14 de diciembre del 2025
+              </span>
+            </div>
+          </div>
 
-      
-      <div className={appStyle.parallaxCountdown}>
-        <div className={appStyle.scrollElements}>
-          <span className={appStyle.countdownHeader}>Cada vez falta menos</span>
-          <Countdown/>
-        </div>
-      </div>
+          <div ref={invitationRef} className={appStyle.parallaxInvitation}>
+            <div>
+              <img src="/envelope.png" alt="envelope image"  className={appStyle.invitationImg1} />
+              <img src="/stamp.png" alt="stamp image"  className={appStyle.invitationImg2} />
+              <div className={appStyle.invitationImg3}>
+                <Invitation/>
+              </div>
+            </div>
+          </div>
 
-      <div className={appStyle.parallaxVersicle}>
-        <div className={appStyle.versicleContainer}>
-          <span className={appStyle.versicleHeader}>
-            “Todo lo sufre, todo lo cree, todo lo espera, todo lo soporta. El amor nunca deja de ser” </span>
-          <span className={appStyle.versicleHeader}>
-            <br/>
-            1 Corintios 13:7-8
-          </span>
-        </div>
-      </div>
+          <div ref={itineraryRef} className={appStyle.parallaxItinerary}>
+            <div className={appStyle.scrollElements}> 
+              <Itinerary/>
+            </div>
+          </div>
 
-      <div className={appStyle.parallaxGifts}>
-        <div className={appStyle.scrollConventionalParallax}>
-          <GiftsTable/>
-        </div>
-      </div>
+          
+          <div className={appStyle.parallaxCountdown}>
+            <div className={appStyle.scrollElements}>
+              <span className={appStyle.countdownHeader}>Cada vez falta menos</span>
+              <Countdown/>
+            </div>
+          </div>
+
+          <div className={appStyle.parallaxVersicle}>
+            <div className={appStyle.versicleContainer}>
+              <span className={appStyle.versicleHeader}>
+                “Todo lo sufre, todo lo cree, todo lo espera, todo lo soporta. El amor nunca deja de ser” </span>
+              <span className={appStyle.versicleHeader}>
+                <br/>
+                1 Corintios 13:7-8
+              </span>
+            </div>
+          </div>
+
+          <div className={appStyle.parallaxGifts}>
+            <div className={appStyle.scrollConventionalParallax}>
+              <GiftsTable/>
+            </div>
+          </div>
 
     </>
   );
