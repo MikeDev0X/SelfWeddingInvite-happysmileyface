@@ -86,13 +86,13 @@ const App = () => {
           <div ref={bgWrapperRef} className={appStyle.bgWrapper} data-scene="frontpage">
             <div 
                 className={`${appStyle.bgLayer} ${appStyle.bgFrontpage}`} 
-                style={{ backgroundImage: `url(${import.meta.env.BASE_URL}/frontpage.png)` }}/>
+                style={{ backgroundImage: `url(${import.meta.env.BASE_URL}frontpage.png)` }}/>
             <div 
                 className={`${appStyle.bgLayer} ${appStyle.bgInvitation}`} 
-                style={{ backgroundImage: `url(${import.meta.env.BASE_URL}/invitation.png)` }}/>
+                style={{ backgroundImage: `url(${import.meta.env.BASE_URL}invitation.png)` }}/>
             <div 
                 className={`${appStyle.bgLayer} ${appStyle.bgItinerary}`} 
-                style={{ backgroundImage: `url(${import.meta.env.BASE_URL}/itinerary.png)` }}/>
+                style={{ backgroundImage: `url(${import.meta.env.BASE_URL}itinerary.png)` }}/>
           </div>
 
           <div ref={frontpageRef} className={appStyle.parallax}>
