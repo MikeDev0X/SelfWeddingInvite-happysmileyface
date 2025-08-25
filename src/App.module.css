@@ -18,9 +18,6 @@
   will-change: opacity;
 }
 
-.bgFrontpage { background-image: url("/frontpage.png"); }
-.bgInvitation { background-image: url("/classy_background.png"); }
-.bgItinerary { background-image: url("/itinerary_background.png"); }
 
 .bgWrapper[data-scene="frontpage"] .bgFrontpage { opacity: 1; }
 .bgWrapper[data-scene="frontpage"] .bgInvitation { opacity: 0; }

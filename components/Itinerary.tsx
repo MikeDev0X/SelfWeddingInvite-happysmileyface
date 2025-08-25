@@ -1,10 +1,10 @@
 import itinStyle from './ItineraryStyle.module.css';
 //Images
-import glassImg from '../public/glass.png';
-import ringsImg from '../public/rings.png';
-import menuImg  from '../public/menu.png';
-import partyImg from '../public/party.png';
-import cakeImg  from '../public/cake.png';
+import glassImg from '/glass.png';
+import ringsImg from '/rings.png';
+import menuImg  from '/menu.png';
+import partyImg from '/party.png';
+import cakeImg  from '/cake.png';
 
 const Itinerary = () =>{
 
