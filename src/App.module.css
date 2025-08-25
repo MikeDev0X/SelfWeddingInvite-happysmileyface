@@ -18,6 +18,18 @@
   will-change: opacity;
 }
 
+.bgFrontpage {
+  background-image: url("${import.meta.env.BASE_URL}frontpage.png");
+}
+
+.bgInvitation {
+  background-image: url("${import.meta.env.BASE_URL}classy_background.png");
+}
+
+.bgItinerary {
+  background-image: url("${import.meta.env.BASE_URL}itinerary_background.png");
+}
+
 .bgWrapper[data-scene="frontpage"] .bgFrontpage { opacity: 1; }
 .bgWrapper[data-scene="frontpage"] .bgInvitation { opacity: 0; }
 .bgWrapper[data-scene="frontpage"] .bgItinerary { opacity: 0; }
