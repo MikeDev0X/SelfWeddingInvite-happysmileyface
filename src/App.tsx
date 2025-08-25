@@ -89,10 +89,10 @@ const App = () => {
                 style={{ backgroundImage: `url(${import.meta.env.BASE_URL}frontpage.png)` }}/>
             <div 
                 className={`${appStyle.bgLayer} ${appStyle.bgInvitation}`} 
-                style={{ backgroundImage: `url(${import.meta.env.BASE_URL}invitation.png)` }}/>
+                style={{ backgroundImage: `url(${import.meta.env.BASE_URL}classy_background.png)` }}/>
             <div 
                 className={`${appStyle.bgLayer} ${appStyle.bgItinerary}`} 
-                style={{ backgroundImage: `url(${import.meta.env.BASE_URL}itinerary.png)` }}/>
+                style={{ backgroundImage: `url(${import.meta.env.BASE_URL}itinerary_background.png)` }}/>
           </div>
 
           <div ref={frontpageRef} className={appStyle.parallax}>

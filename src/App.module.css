@@ -18,7 +18,6 @@
   will-change: opacity;
 }
 
-
 .bgWrapper[data-scene="frontpage"] .bgFrontpage { opacity: 1; }
 .bgWrapper[data-scene="frontpage"] .bgInvitation { opacity: 0; }
 .bgWrapper[data-scene="frontpage"] .bgItinerary { opacity: 0; }
