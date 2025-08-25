@@ -2,7 +2,7 @@
     position : absolute;
     width : 30rem;
     height : 30rem;
-    background-image : url("/shell_white_paper.png");
+    background-image : url("/shell_white_paper.webp");
     background-size: cover;
     display: flex;
     flex-direction: column;

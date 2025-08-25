@@ -2,7 +2,7 @@
     position : absolute;
     width : 20rem;
     height : 30rem;
-    background-image : url("/gifts_table_paper.png");
+    background-image : url("/gifts_table_paper.webp");
     background-size: cover;
     display: flex;
     flex-direction: column;

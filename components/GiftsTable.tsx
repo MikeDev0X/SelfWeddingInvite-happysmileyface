@@ -1,6 +1,6 @@
 import giftStyle from './GiftsTable.module.css';
-import liverpoolImg from '/liverpool_icon.png';
-import giftImage    from '/gift.png';
+import liverpoolImg from '/liverpool_icon.webp';
+import giftImage    from '/gift.webp';
 
 const GiftsTable = () =>{
 

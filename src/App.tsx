@@ -8,8 +8,8 @@ import useSound from "use-sound";
 import mainTrack from '../src/assets/soundtracks/mainSoundtrack.mp3';
 
 //Images
-import envelopeImg from '/envelope.png';
-import stampImg from '/stamp.png';
+import envelopeImg from '/envelope.webp';
+import stampImg from '/stamp.webp';
 
 
 const App = () => {
@@ -86,13 +86,13 @@ const App = () => {
           <div ref={bgWrapperRef} className={appStyle.bgWrapper} data-scene="frontpage">
             <div 
                 className={`${appStyle.bgLayer} ${appStyle.bgFrontpage}`} 
-                style={{ backgroundImage: `url(${import.meta.env.BASE_URL}frontpage.png)` }}/>
+                style={{ backgroundImage: `url(${import.meta.env.BASE_URL}frontpage.webp)` }}/>
             <div 
                 className={`${appStyle.bgLayer} ${appStyle.bgInvitation}`} 
-                style={{ backgroundImage: `url(${import.meta.env.BASE_URL}classy_background.png)` }}/>
+                style={{ backgroundImage: `url(${import.meta.env.BASE_URL}classy_background.webp)` }}/>
             <div 
                 className={`${appStyle.bgLayer} ${appStyle.bgItinerary}`} 
-                style={{ backgroundImage: `url(${import.meta.env.BASE_URL}itinerary_background.png)` }}/>
+                style={{ backgroundImage: `url(${import.meta.env.BASE_URL}itinerary_background.webp)` }}/>
           </div>
 
           <div ref={frontpageRef} className={appStyle.parallax}>

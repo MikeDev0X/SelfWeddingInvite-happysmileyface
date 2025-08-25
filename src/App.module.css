@@ -62,20 +62,20 @@
 }
 
 .parallaxCountdown{
-  background-image: url("/countdown_background.png"); 
+  background-image: url("/countdown_background.webp"); 
   height: 30dvh; 
   width: 100dvw; 
 }
 
 .parallaxVersicle{
-  background-image: url("/versicle_background.png"); 
+  background-image: url("/versicle_background.webp"); 
   background-position: 50%;
   height: 70dvh; 
   width: 100dvw; 
 }
 
 .parallaxGifts{
-  background-image: url("/giftsTable_background.png"); 
+  background-image: url("/giftsTable_background.webp"); 
   background-position: 50%;
   height: 100dvh; 
   width: 100dvw; 
