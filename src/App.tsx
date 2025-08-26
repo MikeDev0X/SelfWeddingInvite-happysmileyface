@@ -40,6 +40,7 @@ const App = () => {
   const invitationRef = useRef<HTMLDivElement>(null);
   const frontpageRef  = useRef<HTMLDivElement>(null);
   const itineraryRef  = useRef<HTMLDivElement>(null);
+  const giftstableRef = useRef<HTMLDivElement>(null);
   const dresscodeRef  = useRef<HTMLDivElement>(null);
   const finalRef      = useRef<HTMLDivElement>(null);
 
@@ -57,6 +58,7 @@ const App = () => {
     const invitation = invitationRef.current;
     const frontpage = frontpageRef.current;
     const itinerary = itineraryRef.current;
+    const giftstable = giftstableRef.current;
     const dresscode = dresscodeRef.current;
     const final     = finalRef.current;
 
@@ -64,8 +66,9 @@ const App = () => {
         !invitation || 
         !itinerary  || 
         !frontpage  ||
-        !final      ||
-        !dresscode) return;
+        !giftstable ||
+        !dresscode  ||
+        !final      ) return;
 
     const io = new IntersectionObserver(
       (entries) => {
@@ -81,6 +84,8 @@ const App = () => {
                wrapper.setAttribute("data-scene", "final");
             } else if (entry.target === dresscode){
                wrapper.setAttribute("data-scene", "dresscode");
+            }else if (entry.target === giftstable){
+               wrapper.setAttribute("data-scene", "giftstable");
               }
           }
       });
@@ -91,8 +96,9 @@ const App = () => {
       io.observe(frontpage);
       io.observe(invitation);
       io.observe(itinerary);
-      io.observe(final);
+      io.observe(giftstable);
       io.observe(dresscode);
+      io.observe(final);
 
     return () => io.disconnect();
   }, []);
@@ -110,6 +116,9 @@ const App = () => {
             <div 
                 className={`${appStyle.bgLayer} ${appStyle.bgItinerary}`} 
                 style={{ backgroundImage: `url(${import.meta.env.BASE_URL}itinerary_background.webp)` }}/>
+            <div 
+                className={`${appStyle.bgLayer} ${appStyle.bgGiftstable}`} 
+                style={{ backgroundImage: `url(${import.meta.env.BASE_URL}classy_background.webp)` }}/>
             <div 
                 className={`${appStyle.bgLayer} ${appStyle.bgDresscode}`} 
                 style={{ backgroundImage: `url(${import.meta.env.BASE_URL}itinerary_background.webp)` }}/>
@@ -162,7 +171,7 @@ const App = () => {
           </div>
 
           
-          <div className={appStyle.parallaxGifts}>
+          <div ref={giftstableRef} className={appStyle.parallaxGifts}>
             <div className={appStyle.scrollConventionalParallax}>
               <GiftsTable/>
             </div>
@@ -170,13 +179,13 @@ const App = () => {
 
           <div ref={dresscodeRef} className={appStyle.parallaxDressCode}>
             <div className={appStyle.scrollElements}> 
-              <Itinerary/>
+              DRESS CODE
             </div>
           </div>
 
           <div ref={finalRef} className={appStyle.parallaxDressCode}>
             <div className={appStyle.scrollElements}> 
-              <Itinerary/>
+              FINAL
             </div>
           </div>
 

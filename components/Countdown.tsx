@@ -29,12 +29,12 @@ const Countdown = () =>{
             <div className={countStyle.mainContainer}>
                 <CountdownCircleTimer
                     {...timerProps}
-                    colors='#333333'
+                    colors='#B3B3B3'
                     duration={daysDuration}
                     initialRemainingTime={deltaSeconds}
                 >
-                    {({ elapsedTime, color }) => (
-                    <span className={countStyle.timeFormat} style={{ color}}>
+                    {({ elapsedTime }) => (
+                    <span className={countStyle.timeFormat} style={{ color : '#3B3B3B'}}>
                         <span className={countStyle.number}>{getTimeDays(daysDuration - elapsedTime)}</span>
                         <span className={countStyle.label}>DÍAS</span>
                     </span>
@@ -42,14 +42,14 @@ const Countdown = () =>{
                 </CountdownCircleTimer>
                 <CountdownCircleTimer
                     {...timerProps}
-                    colors="#2F4F4F"
+                    colors="#6CA9A8"
                     duration={daySeconds}
                     initialRemainingTime={deltaSeconds % daySeconds}
                     onComplete={(totalElapsedTime) => ({
                     shouldRepeat: deltaSeconds - totalElapsedTime > hourSeconds })}
                 >
-                    {({ elapsedTime, color }) => (
-                    <span className={countStyle.timeFormat} style={{ color }}>
+                    {({ elapsedTime }) => (
+                    <span className={countStyle.timeFormat} style={{ color : '#2ABFBE' }}>
                         <span className={countStyle.number}>{getTimeHours(daySeconds - elapsedTime)}</span>
                         <span className={countStyle.label}>HORAS</span>
                     </span>
@@ -57,14 +57,14 @@ const Countdown = () =>{
                 </CountdownCircleTimer>
                 <CountdownCircleTimer
                     {...timerProps}
-                    colors="#1E3A5F"
+                    colors="#6A8FCF"
                     duration={hourSeconds}
                     initialRemainingTime={deltaSeconds % hourSeconds}
                     onComplete={(totalElapsedTime) => ({
                     shouldRepeat: deltaSeconds - totalElapsedTime > minuteSeconds })}
                 >
-                    {({ elapsedTime, color }) => (
-                    <span className={countStyle.timeFormat} style={{ color }}>
+                    {({ elapsedTime }) => (
+                    <span className={countStyle.timeFormat} style={{ color : '#2B6DCC'}}>
                         <span className={countStyle.number}>{getTimeMinutes(hourSeconds - elapsedTime)}</span>
                         <span className={countStyle.label}>MINUTOS</span>
                     </span>
@@ -72,15 +72,15 @@ const Countdown = () =>{
                 </CountdownCircleTimer>
                 <CountdownCircleTimer
                     {...timerProps}
-                    colors="#6B423A"
+                    colors="#D47E7C"
                     duration={minuteSeconds}
                     initialRemainingTime={deltaSeconds % minuteSeconds}
                     onComplete={(totalElapsedTime) => ({
                     shouldRepeat: deltaSeconds - totalElapsedTime > 0
                     })}
                 >
-                {({ elapsedTime, color }) => (
-                <span className={countStyle.timeFormat} style={{ color }}>
+                {({ elapsedTime }) => (
+                <span className={countStyle.timeFormat} style={{ color : '#D9918B'}}>
                     <span className={countStyle.number}>{getTimeSeconds(elapsedTime)}</span>
                     <span className={countStyle.label}>SEGUNDOS</span>
                 </span>

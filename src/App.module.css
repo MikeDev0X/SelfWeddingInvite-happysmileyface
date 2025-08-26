@@ -23,34 +23,47 @@
 .bgWrapper[data-scene="frontpage"] .bgItinerary { opacity: 0; }
 .bgWrapper[data-scene="frontpage"] .bgDresscode { opacity: 0; }
 .bgWrapper[data-scene="frontpage"] .bgFinal { opacity: 0; }
+.bgWrapper[data-scene="frontpage"] .bgGiftstable { opacity: 0; }
 
 .bgWrapper[data-scene="invitation"] .bgFrontpage { opacity: 0; }
 .bgWrapper[data-scene="invitation"] .bgInvitation { opacity: 1; }
 .bgWrapper[data-scene="invitation"] .bgItinerary  { opacity: 0; }
 .bgWrapper[data-scene="invitation"] .bgDresscode { opacity: 0; }
 .bgWrapper[data-scene="invitation"] .bgFinal { opacity: 0; }
+.bgWrapper[data-scene="invitation"] .bgGiftstable { opacity: 0; }
 
 .bgWrapper[data-scene="itinerary"] .bgFrontpage { opacity: 0; }
 .bgWrapper[data-scene="itinerary"] .bgInvitation { opacity: 0; }
 .bgWrapper[data-scene="itinerary"] .bgItinerary  { opacity: 1; }
 .bgWrapper[data-scene="itinerary"] .bgDresscode { opacity: 0; }
 .bgWrapper[data-scene="itinerary"] .bgFinal { opacity: 0; }
+.bgWrapper[data-scene="itinerary"] .bgGiftstable { opacity: 0; }
 
 .bgWrapper[data-scene="dresscode"] .bgFrontpage { opacity: 0; }
 .bgWrapper[data-scene="dresscode"] .bgInvitation { opacity: 0; }
 .bgWrapper[data-scene="dresscode"] .bgItinerary  { opacity: 0; }
 .bgWrapper[data-scene="dresscode"] .bgDresscode { opacity: 1;}
 .bgWrapper[data-scene="dresscode"] .bgFinal { opacity: 0;}
+.bgWrapper[data-scene="dresscode"] .bgGiftstable { opacity: 0; }
 
 .bgWrapper[data-scene="final"] .bgFrontpage { opacity: 0; }
 .bgWrapper[data-scene="final"] .bgInvitation { opacity: 0; }
 .bgWrapper[data-scene="final"] .bgItinerary  { opacity: 0; }
 .bgWrapper[data-scene="final"] .bgDresscode { opacity: 0;}
 .bgWrapper[data-scene="final"] .bgFinal { opacity: 1;}
+.bgWrapper[data-scene="final"] .bgGiftstable { opacity: 0; }
+
+.bgWrapper[data-scene="giftstable"] .bgFrontpage { opacity: 0; }
+.bgWrapper[data-scene="giftstable"] .bgInvitation { opacity: 0; }
+.bgWrapper[data-scene="giftstable"] .bgItinerary  { opacity: 0; }
+.bgWrapper[data-scene="giftstable"] .bgDresscode { opacity: 0;}
+.bgWrapper[data-scene="giftstable"] .bgFinal { opacity: 0;}
+.bgWrapper[data-scene="giftstable"] .bgGiftstable { opacity: 1; }
 
 .parallax,
 .parallaxInvitation,
 .parallaxItinerary,
+.parallaxGifts,
 .parallaxDressCode{
   position: relative;
   height: 100vh;
@@ -63,23 +76,15 @@
   overflow: hidden;
 }
 
-.parallaxCountdown,
-.parallaxVersicle,
-.parallaxGifts{
+.parallaxVersicle{
   position: relative; 
   background-attachment: fixed; 
-  background-position: center 55%; 
   background-repeat: no-repeat; 
   background-size: cover; 
   display: flex; 
   justify-content: center;
 }
 
-.parallaxCountdown{
-  background-image: url("/countdown_background.webp"); 
-  height: 30dvh; 
-  width: 100dvw; 
-}
 
 .parallaxVersicle{
   background-image: url("/versicle_background.webp"); 
@@ -89,7 +94,6 @@
 }
 
 .parallaxGifts{
-  background-image: url("/giftsTable_background.webp"); 
   background-position: 50%;
   height: 100dvh; 
   width: 100dvw; 
