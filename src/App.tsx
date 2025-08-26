@@ -11,7 +11,6 @@ import mainTrack from '../src/assets/soundtracks/mainSoundtrack.mp3';
 import envelopeImg from '/envelope.webp';
 import stampImg from '/stamp.webp';
 
-
 const App = () => {
     const [started, setStarted] = useState<boolean>(false);
     const [play] = useSound(mainTrack, {
@@ -41,6 +40,8 @@ const App = () => {
   const invitationRef = useRef<HTMLDivElement>(null);
   const frontpageRef  = useRef<HTMLDivElement>(null);
   const itineraryRef  = useRef<HTMLDivElement>(null);
+  const dresscodeRef  = useRef<HTMLDivElement>(null);
+  const finalRef      = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     //calculate view height
@@ -49,13 +50,22 @@ const App = () => {
   }, []);
 
   const bgWrapperRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
     //update background with animation effect
     const wrapper = bgWrapperRef.current;
     const invitation = invitationRef.current;
     const frontpage = frontpageRef.current;
     const itinerary = itineraryRef.current;
-    if (!wrapper || !invitation || !itinerary || !frontpage) return;
+    const dresscode = dresscodeRef.current;
+    const final     = finalRef.current;
+
+    if (!wrapper    || 
+        !invitation || 
+        !itinerary  || 
+        !frontpage  ||
+        !final      ||
+        !dresscode) return;
 
     const io = new IntersectionObserver(
       (entries) => {
@@ -67,16 +77,23 @@ const App = () => {
               wrapper.setAttribute("data-scene", "itinerary");
             } else if (entry.target === frontpage) {
               wrapper.setAttribute("data-scene", "frontpage");
-            }
+            } else if (entry.target === final){
+               wrapper.setAttribute("data-scene", "final");
+            } else if (entry.target === dresscode){
+               wrapper.setAttribute("data-scene", "dresscode");
+              }
           }
       });
       },
-      { threshold: 0.8 }
+      { threshold: 0.7}
     );
 
       io.observe(frontpage);
       io.observe(invitation);
       io.observe(itinerary);
+      io.observe(final);
+      io.observe(dresscode);
+
     return () => io.disconnect();
   }, []);
 
@@ -93,6 +110,13 @@ const App = () => {
             <div 
                 className={`${appStyle.bgLayer} ${appStyle.bgItinerary}`} 
                 style={{ backgroundImage: `url(${import.meta.env.BASE_URL}itinerary_background.webp)` }}/>
+            <div 
+                className={`${appStyle.bgLayer} ${appStyle.bgDresscode}`} 
+                style={{ backgroundImage: `url(${import.meta.env.BASE_URL}itinerary_background.webp)` }}/>
+            <div 
+                className={`${appStyle.bgLayer} ${appStyle.bgFinal}`} 
+                style={{ backgroundImage: `url(${import.meta.env.BASE_URL}frontpage.webp)` }}/>
+          
           </div>
 
           <div ref={frontpageRef} className={appStyle.parallax}>
@@ -120,15 +144,13 @@ const App = () => {
             </div>
           </div>
 
-          
-          <div className={appStyle.parallaxCountdown}>
-            <div className={appStyle.scrollElements}>
+          <div className={appStyle.parallaxVersicle}>
+
+            <div style={{top:'25%'}} className={appStyle.scrollElements}>
               <span className={appStyle.countdownHeader}>Cada vez falta menos</span>
               <Countdown/>
             </div>
-          </div>
 
-          <div className={appStyle.parallaxVersicle}>
             <div className={appStyle.versicleContainer}>
               <span className={appStyle.versicleHeader}>
                 “Todo lo sufre, todo lo cree, todo lo espera, todo lo soporta. El amor nunca deja de ser” </span>
@@ -139,14 +161,26 @@ const App = () => {
             </div>
           </div>
 
+          
           <div className={appStyle.parallaxGifts}>
             <div className={appStyle.scrollConventionalParallax}>
               <GiftsTable/>
             </div>
           </div>
 
+          <div ref={dresscodeRef} className={appStyle.parallaxDressCode}>
+            <div className={appStyle.scrollElements}> 
+              <Itinerary/>
+            </div>
+          </div>
+
+          <div ref={finalRef} className={appStyle.parallaxDressCode}>
+            <div className={appStyle.scrollElements}> 
+              <Itinerary/>
+            </div>
+          </div>
+
     </> 
-   
   );
 }
 
