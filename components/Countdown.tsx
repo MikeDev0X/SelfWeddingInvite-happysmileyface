@@ -49,7 +49,7 @@ const Countdown = () =>{
                     shouldRepeat: deltaSeconds - totalElapsedTime > hourSeconds })}
                 >
                     {({ elapsedTime }) => (
-                    <span className={countStyle.timeFormat} style={{ color : '#2ABFBE' }}>
+                    <span className={countStyle.timeFormat} style={{ color : '#377372' }}>
                         <span className={countStyle.number}>{getTimeHours(daySeconds - elapsedTime)}</span>
                         <span className={countStyle.label}>HORAS</span>
                     </span>
@@ -80,7 +80,7 @@ const Countdown = () =>{
                     })}
                 >
                 {({ elapsedTime }) => (
-                <span className={countStyle.timeFormat} style={{ color : '#D9918B'}}>
+                <span className={countStyle.timeFormat} style={{ color : '#AB4B48'}}>
                     <span className={countStyle.number}>{getTimeSeconds(elapsedTime)}</span>
                     <span className={countStyle.label}>SEGUNDOS</span>
                 </span>

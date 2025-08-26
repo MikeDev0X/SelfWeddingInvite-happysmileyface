@@ -9,7 +9,8 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    color:      #65563e;
+    color:#65563e;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.5);
 }
 
 

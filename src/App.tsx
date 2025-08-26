@@ -1,12 +1,14 @@
 import { useEffect, useRef, useState } from "react";
 import appStyle from "./App.module.css";
+//Components
 import Invitation from '../components/Invitation';
 import Itinerary from '../components/Itinerary';
 import Countdown from '../components/Countdown';
 import GiftsTable from "../components/GiftsTable";
+import Dresscode from "../components/Dresscode";
+//Sound
 import useSound from "use-sound";
 import mainTrack from '../src/assets/soundtracks/mainSoundtrack.mp3';
-
 //Images
 import envelopeImg from '/envelope.webp';
 import stampImg from '/stamp.webp';
@@ -179,6 +181,7 @@ const App = () => {
 
           <div ref={dresscodeRef} className={appStyle.parallaxDressCode}>
             <div className={appStyle.scrollElements}> 
+              <Dresscode/>
               DRESS CODE
             </div>
           </div>

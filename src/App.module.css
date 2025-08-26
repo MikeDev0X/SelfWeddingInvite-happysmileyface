@@ -159,6 +159,7 @@
   font-size: 1.8em;
   height: 10dvh;
   color: white;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
 }
 
 .versicleContainer{

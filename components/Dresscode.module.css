@@ -1,0 +1,35 @@
+.mainContainer{
+    position : absolute;
+    width : 19rem;
+    height : 16rem;
+    background-image : url("/dresscode_paper.webp");
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color:#65563e;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+}
+
+.groomBride{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.mainTitle{
+    padding-top: 0.5em;
+    width: 100%;
+    font-size: 1.7em;
+    text-align : center;
+    font-family: newiconscript;
+}
+
+.subtitle{
+    font-size: 0.9em;
+    width: 80%;
+    font-family: texgyrebonum;
+}
