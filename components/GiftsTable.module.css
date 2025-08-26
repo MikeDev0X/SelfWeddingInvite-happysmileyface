@@ -25,22 +25,23 @@
     font-family: texgyrebonum;
 }
 
-.liverpoolContainer{
+.amazonContainer{
     display: flex;
     flex-direction: row;
     justify-content:space-around;
     align-items: center;
     width: 70%;
+    padding-top: 1em;
 }
 
-.liverpoolButton{
+.amazonButton{
     width: 4em;
-    height: 1em;
+    height: 100%;
     border: 1px solid #65563e;
     cursor: pointer;
 }
 
-.liverpoolButton:hover{
+.amazonButton:hover{
     background-color: #65563e;
     color:beige;
 }

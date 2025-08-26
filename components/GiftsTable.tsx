@@ -1,11 +1,11 @@
 import giftStyle from './GiftsTable.module.css';
-import liverpoolImg from '/liverpool_icon.webp';
+import amazonImg from '/amazon_logo.webp';
 import giftImage    from '/gift.webp';
 
 const GiftsTable = () =>{
 
     const handleClick = () =>{
-        window.open('https://mesaderegalos.liverpool.com.mx/milistaderegalos/51747015', 
+        window.open('https://www.amazon.com.mx/wedding/share/miki_eli_gift_table', 
             '_blank', 
             'noopener,noreferrer');
     }
@@ -25,14 +25,14 @@ const GiftsTable = () =>{
                 <span className={giftStyle.subtitle}>Miguel Jiménez Padilla</span>
                 <span className={giftStyle.subtitle}>6381 8001 0170 9987 48</span>
                     <br />
-                <span className={giftStyle.subtitle}>Mesa de regalos Liverpool</span>
+                <span className={giftStyle.subtitle}>Mesa de regalos Amazon</span>
 
-                <div className={giftStyle.liverpoolContainer}>
-                    <img   src={liverpoolImg} 
-                           alt="liverpool image" 
+                <div className={giftStyle.amazonContainer}>
+                    <img   src={amazonImg} 
+                           alt="amazon image" 
                            style={{width:'4em'}}  
                             />
-                    <div className={giftStyle.liverpoolButton} onClick={()=> handleClick()}>
+                    <div className={giftStyle.amazonButton} onClick={()=> handleClick()}>
                         <span className={giftStyle.buttonText}>Ir a Mesa</span>
                     </div>
                 </div>
