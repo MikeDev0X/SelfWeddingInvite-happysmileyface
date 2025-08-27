@@ -123,6 +123,29 @@
   justify-content: center;
 }
 
+.scrollDress{
+  position: absolute;
+  top: 20%;
+  transition: transform 0.8s ease-out;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.scrollMap{
+  position: absolute;
+  bottom: 30%;
+  transition: transform 0.8s ease-out;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .invitationImg1{
   border-radius: 0.1em;
   position: absolute;

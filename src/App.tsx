@@ -6,6 +6,7 @@ import Itinerary from '../components/Itinerary';
 import Countdown from '../components/Countdown';
 import GiftsTable from "../components/GiftsTable";
 import Dresscode from "../components/Dresscode";
+import MapC from "../components/MapC";
 //Sound
 import useSound from "use-sound";
 import mainTrack from '../src/assets/soundtracks/mainSoundtrack.mp3';
@@ -180,9 +181,11 @@ const App = () => {
           </div>
 
           <div ref={dresscodeRef} className={appStyle.parallaxDressCode}>
-            <div className={appStyle.scrollElements}> 
+            <div className={appStyle.scrollDress}> 
               <Dresscode/>
-              DRESS CODE
+            </div>
+            <div className={appStyle.scrollMap}> 
+              <MapC/>
             </div>
           </div>
 
