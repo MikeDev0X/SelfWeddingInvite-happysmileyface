@@ -1,7 +1,7 @@
 .mainContainer{
     position : absolute;
-    width : 30rem;
-    height : 30rem;
+    width : 18rem;
+    height : 27rem;
     background-image : url("/shell_white_paper.webp");
     background-size: cover;
     display: flex;
@@ -10,6 +10,7 @@
     align-items: center;
     text-align: center;
     color:      #65563e;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.6);
 }
 
 .text{

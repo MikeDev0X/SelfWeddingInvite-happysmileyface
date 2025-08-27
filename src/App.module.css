@@ -124,30 +124,32 @@
 }
 
 .invitationImg1{
+  border-radius: 0.1em;
   position: absolute;
-  width:20em;
-  height: auto;
+  width:14em;
+  height: 20em;
   top: 30%;
   left: 40%;
-  transform: translate(-60%, -50%);
+  transform: translate(-65%, -50%);
   z-index: 1;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.6);
 }
 .invitationImg2{
   position: absolute;
-  width: 4em;
+  width: 4.5em;
   height: auto;
   top: 30%;
   left: 40%;
-  transform: translate(-175%, -150%);
+  transform: translate(-135%, -140%);
   z-index: 3;
 }
 .invitationImg3{
   position: absolute;
-  width: 30em;
-  height: 100%;
+  width: 18em;
+  height: 27em;
   top: 30%;
   left: 40%;
-  transform: translate(-35%, -10%);
+  transform: translate(-23%, -15%);
   z-index: 2;
 }
 
