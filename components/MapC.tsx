@@ -28,7 +28,8 @@ const MapC = () =>{
                         <GoogleMap center={defaultProps.center} 
                                    zoom={defaultProps.zoom}
                                    mapContainerStyle={{ width: '100%', height: '100%', borderRadius:'0.5em'}}
-                             />
+                                   onClick={() => openInMaps()} 
+                            />
                     </div>
                 </LoadScript>
 
