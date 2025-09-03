@@ -10,11 +10,15 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@ionic/react": "^8.7.3",
     "@react-google-maps/api": "^2.20.7",
     "@types/css-modules": "^1.0.5",
+    "ionicons": "^8.0.13",
+    "keen-slider": "^6.8.6",
     "react": "^19.1.1",
     "react-countdown-circle-timer": "^3.2.1",
     "react-dom": "^19.1.1",
+    "swiper": "^11.2.10",
     "use-sound": "^5.0.0"
   },
   "devDependencies": {

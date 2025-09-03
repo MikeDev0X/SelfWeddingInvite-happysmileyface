@@ -7,6 +7,7 @@ import Countdown from '../components/Countdown';
 import GiftsTable from "../components/GiftsTable";
 import Dresscode from "../components/Dresscode";
 import MapC from "../components/MapC";
+import Carousel from "../components/Carousel";
 //Sound
 import useSound from "use-sound";
 import mainTrack from '../src/assets/soundtracks/mainSoundtrack.mp3';
@@ -45,6 +46,7 @@ const App = () => {
   const itineraryRef  = useRef<HTMLDivElement>(null);
   const giftstableRef = useRef<HTMLDivElement>(null);
   const dresscodeRef  = useRef<HTMLDivElement>(null);
+  const carouselRef   = useRef<HTMLDivElement>(null);
   const finalRef      = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -63,6 +65,7 @@ const App = () => {
     const itinerary = itineraryRef.current;
     const giftstable = giftstableRef.current;
     const dresscode = dresscodeRef.current;
+    const carousel  = carouselRef.current;
     const final     = finalRef.current;
 
     if (!wrapper    || 
@@ -71,6 +74,7 @@ const App = () => {
         !frontpage  ||
         !giftstable ||
         !dresscode  ||
+        !carousel   ||
         !final      ) return;
 
     const io = new IntersectionObserver(
@@ -89,7 +93,9 @@ const App = () => {
                wrapper.setAttribute("data-scene", "dresscode");
             }else if (entry.target === giftstable){
                wrapper.setAttribute("data-scene", "giftstable");
-              }
+            }else if (entry.target === carousel){
+              wrapper.setAttribute("data-scene", "carousel");
+            }
           }
       });
       },
@@ -101,6 +107,7 @@ const App = () => {
       io.observe(itinerary);
       io.observe(giftstable);
       io.observe(dresscode);
+      io.observe(carousel);
       io.observe(final);
 
     return () => io.disconnect();
@@ -128,7 +135,9 @@ const App = () => {
             <div 
                 className={`${appStyle.bgLayer} ${appStyle.bgFinal}`} 
                 style={{ backgroundImage: `url(${import.meta.env.BASE_URL}frontpage.webp)` }}/>
-          
+            <div 
+                className={`${appStyle.bgLayer} ${appStyle.bgCarousel}`} 
+                style={{ backgroundImage: `url(${import.meta.env.BASE_URL}vintage_paper.webp)` }}/>
           </div>
 
           <div ref={frontpageRef} className={appStyle.parallax}>
@@ -157,20 +166,21 @@ const App = () => {
           </div>
 
           <div className={appStyle.parallaxVersicle}>
+    
+              <div style={{top:'25%'}} className={appStyle.scrollElements}>
+                <span className={appStyle.countdownHeader}>Cada vez falta menos</span>
+                <Countdown/>
+              </div>
 
-            <div style={{top:'25%'}} className={appStyle.scrollElements}>
-              <span className={appStyle.countdownHeader}>Cada vez falta menos</span>
-              <Countdown/>
-            </div>
+              <div className={appStyle.versicleContainer}>
+                <span className={appStyle.versicleHeader}>
+                  “Todo lo sufre, todo lo cree, todo lo espera, todo lo soporta. El amor nunca deja de ser” </span>
+                <span className={appStyle.versicleHeader}>
+                  <br/>
+                  1 Corintios 13:7-8
+                </span>
+              </div>
 
-            <div className={appStyle.versicleContainer}>
-              <span className={appStyle.versicleHeader}>
-                “Todo lo sufre, todo lo cree, todo lo espera, todo lo soporta. El amor nunca deja de ser” </span>
-              <span className={appStyle.versicleHeader}>
-                <br/>
-                1 Corintios 13:7-8
-              </span>
-            </div>
           </div>
 
           
@@ -186,6 +196,17 @@ const App = () => {
             </div>
             <div className={appStyle.scrollMap}> 
               <MapC/>
+            </div>
+          </div>
+
+          <div ref={carouselRef} className={appStyle.parallaxCarousel}>
+            <div className={appStyle.scrollElCarousel}> 
+              <Carousel/>
+            </div>
+            <div className={appStyle.scrollElements}>
+              <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+              <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+              <span>a</span>
             </div>
           </div>
 

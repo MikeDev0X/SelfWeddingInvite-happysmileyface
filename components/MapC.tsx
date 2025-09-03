@@ -5,8 +5,8 @@ import { GoogleMap, LoadScript } from '@react-google-maps/api';
 
 const MapC = () =>{
     const defaultProps = {
-        center: { lat: 18.62284, lng: -99.2015 },
-        zoom: 17,
+        center: { lat: 18.62284, lng: -99.2012 },
+        zoom: 18,
       };
     const openInMaps = () => {
         //const { lat, lng } = defaultProps.center;
@@ -23,11 +23,10 @@ const MapC = () =>{
                 </span>
                 <img src={rosaZafiroImg} alt="Jardín Rosa Zafiro icon" style={{width:'6em', paddingTop:'0.5em'}} />
                 <LoadScript  googleMapsApiKey={apiKey}>
-                    <div onClick={() => openInMaps()} 
+                    <div 
                          style={{ height: '6em', width: '10em', padding:'1em'}}>
                         <GoogleMap center={defaultProps.center} 
                                    zoom={defaultProps.zoom}
-                                   options={{disableDefaultUI:true}}
                                    mapContainerStyle={{ width: '100%', height: '100%', borderRadius:'0.5em'}}
                              />
                     </div>
