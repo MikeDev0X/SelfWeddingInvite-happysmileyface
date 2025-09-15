@@ -1,7 +1,7 @@
 .mainContainer{
     position : absolute;
     width : 17rem;
-    height : 19rem;
+    height : 21rem;
     background-color : #C5AC9E;
     border-radius: 10em 10em 0 0;
     display: flex;
@@ -25,4 +25,36 @@
     font-size: 0.9em;
     width: 80%;
     font-family: texgyrebonum;
+}
+
+.reserveButton{
+    border: 1px solid #65563e;
+    width: 50%;
+    padding: 0.2em;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+
+@media (min-width: 769px) {
+  .mainContainer{
+    width: 15rem;
+    height: 19rem;
+  }
+
+  .mainTitle{
+    padding-top: 0.5em;
+    width: 100%;
+    font-size: 1.5em;
+    text-align : center;
+    font-family: newiconscript;
+}
+
+  .subtitle{
+    font-size: 0.8em;
+    width: 90%;
+    font-family: texgyrebonum;
+}
+
 }

@@ -93,11 +93,6 @@
   overflow: hidden;
 }
 
-.parallaxCarousel{
-  height: 100dvh;
-}
-
-
 .parallaxVersicle{
   position: relative; 
   background-attachment: fixed; 
@@ -110,6 +105,10 @@
   height: 100dvh; 
   width: 100dvw;
   z-index: 0;
+}
+
+.parallaxCarousel{
+  height: 110dvh;
 }
 
 .parallaxGifts{
@@ -157,7 +156,7 @@
 
 .scrollReserve{
   position: absolute;
-  bottom: 25%;
+  bottom: 30%;
   left: 50%;
   transform: translateX(-50%);
   
@@ -261,9 +260,17 @@
 
 
 @supports (-webkit-touch-callout: none) {
-  /* iOS-only styles */
   .parallaxVersicle {
-    /* override the fixed attachment */
-    background-attachment: scroll; /* disable broken behavior */
+    background-attachment: scroll;
+  }
+}
+
+@media (min-width: 769px) {
+  .scrollElCarousel{
+    top: 10%;
+  }
+
+  .scrollReserve{
+    bottom: 25%;
   }
 }
