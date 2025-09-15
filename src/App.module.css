@@ -74,12 +74,14 @@
 .bgWrapper[data-scene="carousel"] .bgGiftstable { opacity: 0; }
 .bgWrapper[data-scene="carousel"] .bgCarousel { opacity: 1; }
 
+
 .parallax,
 .parallaxInvitation,
 .parallaxItinerary,
 .parallaxGifts,
 .parallaxDressCode,
-.parallaxCarousel{
+.parallaxCarousel,
+.parallaxFinal{
   position: relative;
   height: 100dvh;
   height: 100svh;
@@ -89,6 +91,10 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
+}
+
+.parallaxCarousel{
+  height: 100dvh;
 }
 
 
@@ -139,8 +145,22 @@
 
 .scrollElCarousel{
   position: absolute;
-  inset: 0;
-  margin: auto;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.scrollReserve{
+  position: absolute;
+  bottom: 25%;
+  left: 50%;
+  transform: translateX(-50%);
+  
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -237,4 +257,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+
+@supports (-webkit-touch-callout: none) {
+  /* iOS-only styles */
+  .parallaxVersicle {
+    /* override the fixed attachment */
+    background-attachment: scroll; /* disable broken behavior */
+  }
 }

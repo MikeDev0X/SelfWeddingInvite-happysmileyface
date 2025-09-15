@@ -1,10 +1,11 @@
 .navigation-wrapper {
   position: relative;
-  height: 30rem;
-  width: 17rem;
+  height: 16rem;
+  width: 14rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 1em;
 }
 
 .keen-slider{
@@ -14,9 +15,9 @@
 }
 
 .keen-slider__slide {
-  width: 17em;
+  width: 14em;
   margin: 0 auto;
-  border-radius: 12px;
+  border-radius: 1em;
 }
 
 [class^="number-slide"],
@@ -27,7 +28,7 @@
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  height: 23em;
+  height: 16em;
 }
 
 .navigation-wrapper {

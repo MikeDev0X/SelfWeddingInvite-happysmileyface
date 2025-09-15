@@ -8,6 +8,7 @@ import GiftsTable from "../components/GiftsTable";
 import Dresscode from "../components/Dresscode";
 import MapC from "../components/MapC";
 import Carousel from "../components/Carousel";
+import Reserve from "../components/Reserve";
 //Sound
 import useSound from "use-sound";
 import mainTrack from '../src/assets/soundtracks/mainSoundtrack.mp3';
@@ -203,14 +204,12 @@ const App = () => {
             <div className={appStyle.scrollElCarousel}> 
               <Carousel/>
             </div>
-            <div className={appStyle.scrollElements}>
-              <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-              <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-              <span>a</span>
+            <div className={appStyle.scrollReserve}>
+              <Reserve/>
             </div>
           </div>
 
-          <div ref={finalRef} className={appStyle.parallaxDressCode}>
+          <div ref={finalRef} className={appStyle.parallaxFinal}>
             <div className={appStyle.scrollElements}> 
               FINAL
             </div>

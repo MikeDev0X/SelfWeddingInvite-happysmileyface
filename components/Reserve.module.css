@@ -1,22 +1,16 @@
 .mainContainer{
     position : absolute;
-    width : 19rem;
-    height : 16rem;
+    width : 17rem;
+    height : 19rem;
+    background-color : #C5AC9E;
+    border-radius: 10em 10em 0 0;
     display: flex;
-    background-color: #C5AC9E;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    color:#65563e;
-    box-shadow: 2px 2px 8px rgba(0,0,0,0.5);
-}
-
-.groomBride{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+    color: #65563e;
 }
 
 .mainTitle{

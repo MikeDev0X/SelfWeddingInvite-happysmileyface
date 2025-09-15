@@ -2,7 +2,7 @@ name: Deploy Wedding Invite to GitHub Pages
 
 on:
   push:
-    branches: [ "master" ]  # 👈 Change if your default branch is different
+    branches: [ "master" ]
 
 jobs:
   build-deploy:
@@ -15,10 +15,13 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 20  # or whatever version your project uses
+          node-version: 20
 
       - name: Install dependencies
         run: npm install
+
+      - name: Set Vite environment variable
+        run: echo "VITE_API_KEY_WEDDING_INVITE=${{ secrets.VITE_API_KEY_WEDDING_INVITE }}" >> .env.production
 
       - name: Build project
         run: npm run build

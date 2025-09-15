@@ -1,6 +1,6 @@
 import mapStyle from './MapC.module.css';
 import rosaZafiroImg from '/rosa_zafiro_icon.webp';
-const apiKey = import.meta.env.VITE_API_KEY;
+const apiKey = import.meta.env.VITE_API_KEY_WEDDING_INVITE;
 import { GoogleMap, LoadScript } from '@react-google-maps/api';
 
 const MapC = () =>{
