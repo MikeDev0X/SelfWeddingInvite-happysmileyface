@@ -34,8 +34,13 @@
     display: flex;
     justify-content: center;
     align-content: center;
+    cursor: pointer;
 }
 
+.reserveButton:hover{
+    background-color: #65563e;
+    color: beige;
+}
 
 @media (min-width: 769px) {
   .mainContainer{

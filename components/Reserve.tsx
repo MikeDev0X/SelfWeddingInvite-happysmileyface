@@ -3,7 +3,7 @@ import rsvpImg from '/rsvp.webp'
 
 const Reserve = () => {
 
-  const phoneNumber = "527776147227";
+  const phoneNumber = "527772257912";
   const message = "¡Hola! Me gustaría confirmar mi asistencia a tu boda este 14 de Diciembre";
 
   const openWhatsApp = () => {
