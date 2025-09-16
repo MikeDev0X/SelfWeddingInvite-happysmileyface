@@ -69,3 +69,10 @@ button:focus-visible {
   font-weight: normal;
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'texgyrebonum';
+  src: url('./assets/fonts/texgyrebonum-bold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
