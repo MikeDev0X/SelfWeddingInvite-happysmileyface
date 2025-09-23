@@ -15,6 +15,8 @@ import mainTrack from '../src/assets/soundtracks/mainSoundtrack.mp3';
 //Images
 import envelopeImg from '/envelope.webp';
 import stampImg from '/stamp.webp';
+import hotelImperialImg from '/hotel_imperial.webp';
+import hotelPastranaImg from '/hotel_pastrana.webp';
 
 const App = () => {
     const [started, setStarted] = useState<boolean>(false);
@@ -49,6 +51,7 @@ const App = () => {
   const dresscodeRef  = useRef<HTMLDivElement>(null);
   const carouselRef   = useRef<HTMLDivElement>(null);
   const finalRef      = useRef<HTMLDivElement>(null);
+  const accommodationRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     //calculate view height
@@ -68,6 +71,7 @@ const App = () => {
     const dresscode = dresscodeRef.current;
     const carousel  = carouselRef.current;
     const final     = finalRef.current;
+    const accommodation = accommodationRef.current;
 
     if (!wrapper    || 
         !invitation || 
@@ -76,7 +80,8 @@ const App = () => {
         !giftstable ||
         !dresscode  ||
         !carousel   ||
-        !final      ) return;
+        !final      ||
+        !accommodation) return;
 
     const io = new IntersectionObserver(
       (entries) => {
@@ -96,6 +101,8 @@ const App = () => {
                wrapper.setAttribute("data-scene", "giftstable");
             }else if (entry.target === carousel){
               wrapper.setAttribute("data-scene", "carousel");
+            }else if (entry.target === accommodation){
+              wrapper.setAttribute("data-scene", "accommodation");
             }
           }
       });
@@ -109,10 +116,22 @@ const App = () => {
       io.observe(giftstable);
       io.observe(dresscode);
       io.observe(carousel);
+      io.observe(accommodation);
       io.observe(final);
 
     return () => io.disconnect();
   }, []);
+
+
+  
+  const dict = {
+    imperial : 'gwAp32JzfsECtNMR9',
+    pastrana : 'qYrprRZ2Eg5mTCp56'
+  }
+
+  const openInMaps = (hotelType : keyof typeof dict) => {
+      window.open(`https://maps.app.goo.gl/${dict[hotelType]}`, '_blank');
+  };
 
   return (
     <>
@@ -138,6 +157,9 @@ const App = () => {
                 style={{ backgroundImage: `url(${import.meta.env.BASE_URL}frontpage.webp)` }}/>
             <div 
                 className={`${appStyle.bgLayer} ${appStyle.bgCarousel}`} 
+                style={{ backgroundImage: `url(${import.meta.env.BASE_URL}classy_background.webp)` }}/>            
+            <div 
+                className={`${appStyle.bgLayer} ${appStyle.bgAccommodation}`} 
                 style={{ backgroundImage: `url(${import.meta.env.BASE_URL}vintage_paper.webp)` }}/>
           </div>
 
@@ -197,6 +219,25 @@ const App = () => {
             </div>
             <div className={appStyle.scrollMap}> 
               <MapC/>
+            </div>
+          </div>
+
+          <div ref={accommodationRef} className={appStyle.parallaxAccommodation}>
+            <div className={appStyle.scrollAccommodation}>
+              <span className={appStyle.accommodationItalics}>Recomendaciones</span>
+              <span className={appStyle.accommodationText} style={{fontSize: '2em'}}>Hospedaje</span>
+
+              <img src={hotelImperialImg} alt="Hotel Imperial Jojutla"  className={appStyle.accommodationImg} onClick={() => openInMaps('imperial')}/>
+              <br />
+              <span className={appStyle.accommodationText} style={{fontSize: '1em', fontWeight: 'bold'}}>Hotel Imperial Jojutla</span>
+              <a href="http://hotelimperialjojutla.com.mx/" target="_blank" className={appStyle.accommodationText} style={{fontSize: '1em', fontStyle: 'italic', textDecoration:'underline'}}>Sitio web</a>
+              
+              <img src={hotelPastranaImg} alt="Hotel La Pastrana Jojutla"  className={appStyle.accommodationImg} onClick={() => openInMaps('pastrana')}/>
+              <br />
+              <span className={appStyle.accommodationText} style={{fontSize: '1em', fontWeight: 'bold'}}>Hotel La Pastrana Jojutla</span>
+              <a href="http://hotelimperialjojutla.com.mx/" target="_blank" className={appStyle.accommodationText} style={{fontSize: '1em', fontStyle: 'italic', textDecoration:'underline'}}>Sitio web</a>
+
+
             </div>
           </div>
 
