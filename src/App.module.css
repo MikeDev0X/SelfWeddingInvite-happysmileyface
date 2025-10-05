@@ -133,7 +133,7 @@
 }
 
 .parallaxAccommodation{
-  height: 105dvh !important;
+  height: 100dvh !important;
 }
 
 .scrollText {
@@ -253,8 +253,8 @@
 .accommodationImg{
   border-radius: 2.7em;
   padding-top: 1em;
-  width: 12em;
-  height: 12em;
+  width: 10em;
+  height: 10em;
 }
 
 .countdownHeader{

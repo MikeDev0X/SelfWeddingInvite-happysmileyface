@@ -235,7 +235,7 @@ const App = () => {
               <img src={hotelPastranaImg} alt="Hotel La Pastrana Jojutla"  className={appStyle.accommodationImg} onClick={() => openInMaps('pastrana')}/>
               <br />
               <span className={appStyle.accommodationText} style={{fontSize: '1em', fontWeight: 'bold'}}>Hotel La Pastrana Jojutla</span>
-              <a href="http://hotelimperialjojutla.com.mx/" target="_blank" className={appStyle.accommodationText} style={{fontSize: '1em', fontStyle: 'italic', textDecoration:'underline'}}>Sitio web</a>
+              <a href="tel:+52 7343423085" target="_blank" className={appStyle.accommodationText} style={{fontSize: '1em', fontStyle: 'italic', textDecoration:'underline'}}>Contacto telefónico</a>
 
 
             </div>

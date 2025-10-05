@@ -19,13 +19,13 @@ const Reserve = () => {
                 </span>
                 <img    src={rsvpImg}
                         alt="rsvp image" 
-                        style={{width:'9em', paddingTop: '0.5em', paddingBottom: '0.5em'}}/>
+                        style={{width:'7em', paddingTop: '0.5em', paddingBottom: '0.5em'}}/>
                 <span className={reserveStyle.subtitle} style={{paddingBottom:'1em'}}>
                     Tu confirmación de asistencia es muy importante para nosotros.
                     Nota: Los pases son personales, por favor confirma por cada invitado.
                 </span>
                 <div className={reserveStyle.reserveButton} onClick={()=> openWhatsApp()}>
-                    <span className={reserveStyle.subtitle}>
+                    <span style={{fontWeight:'bold'}} className={reserveStyle.subtitle}>
                         Confirma aquí
                     </span>
                 </div>
