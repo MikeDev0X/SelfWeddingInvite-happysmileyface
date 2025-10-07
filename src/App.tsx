@@ -17,7 +17,7 @@ import envelopeImg from '/envelope.webp';
 import stampImg from '/stamp.webp';
 import hotelImperialImg from '/hotel_imperial.webp';
 import hotelPastranaImg from '/hotel_pastrana.webp';
-import sealBw from '/seal_bw.webp';
+import sealBw from '/seal_bw.png';
 
 const App = () => {
     const [started, setStarted] = useState<boolean>(false);
@@ -160,9 +160,6 @@ const App = () => {
                 className={`${appStyle.bgLayer} ${appStyle.bgDresscode}`} 
                 style={{ backgroundImage: `url(${import.meta.env.BASE_URL}itinerary_background.webp)` }}/>
             <div 
-                className={`${appStyle.bgLayer} ${appStyle.bgFinal}`} 
-                style={{ backgroundImage: `url(${import.meta.env.BASE_URL}frontpage.webp)` }}/>
-            <div 
                 className={`${appStyle.bgLayer} ${appStyle.bgCarousel}`} 
                 style={{ backgroundImage: `url(${import.meta.env.BASE_URL}classy_background.webp)` }}/>            
             <div 
@@ -171,6 +168,9 @@ const App = () => {
             <div 
                 className={`${appStyle.bgLayer} ${appStyle.bgVersicle}`} 
                 style={{ backgroundImage: `url(${import.meta.env.BASE_URL}versicle_background.webp)` }}/>
+            <div 
+                className={`${appStyle.bgLayer} ${appStyle.bgFinal}`} 
+                style={{ backgroundImage: `url(${import.meta.env.BASE_URL}finalpage.webp)` }}/>
           </div>
 
           <div ref={frontpageRef} className={appStyle.parallax}>

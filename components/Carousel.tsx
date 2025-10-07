@@ -42,6 +42,24 @@ const Carousel = () => {
                      style={{backgroundImage: `url(${import.meta.env.BASE_URL}carousel6.webp)`}}></div>                
                 <div className="keen-slider__slide number-slide"
                      style={{backgroundImage: `url(${import.meta.env.BASE_URL}carousel7.webp)`}}></div>
+
+                <div className="keen-slider__slide number-slide"
+                     style={{backgroundImage: `url(${import.meta.env.BASE_URL}carousel8.webp)`}}></div>
+                <div className="keen-slider__slide number-slide"
+                     style={{backgroundImage: `url(${import.meta.env.BASE_URL}carousel9.webp)`}}></div>
+                <div className="keen-slider__slide number-slide"
+                     style={{backgroundImage: `url(${import.meta.env.BASE_URL}carousel10.webp)`}}></div>
+                <div className="keen-slider__slide number-slide"
+                     style={{backgroundImage: `url(${import.meta.env.BASE_URL}carousel11.webp)`}}></div>                
+                <div className="keen-slider__slide number-slide"
+                     style={{backgroundImage: `url(${import.meta.env.BASE_URL}carousel12.webp)`}}></div>
+                <div className="keen-slider__slide number-slide"
+                     style={{backgroundImage: `url(${import.meta.env.BASE_URL}carousel13.webp)`}}></div>
+                <div className="keen-slider__slide number-slide"
+                     style={{backgroundImage: `url(${import.meta.env.BASE_URL}carousel14.webp)`}}></div>
+                <div className="keen-slider__slide number-slide"
+                     style={{backgroundImage: `url(${import.meta.env.BASE_URL}carousel15.webp)`}}></div>
+                
                 </div>
                 {loaded && instanceRef.current && (
                 <>
