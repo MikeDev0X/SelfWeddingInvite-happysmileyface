@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import appStyle from "./App.module.css";
 //Components
 import Invitation from '../components/Invitation';
@@ -9,9 +9,7 @@ import Dresscode from "../components/Dresscode";
 import MapC from "../components/MapC";
 import Carousel from "../components/Carousel";
 import Reserve from "../components/Reserve";
-//Sound
-import useSound from "use-sound";
-import mainTrack from '../src/assets/soundtracks/mainSoundtrack.mp3';
+import MusicButton from "../components/MusicButton";
 //Images
 import envelopeImg from '/envelope.webp';
 import stampImg from '/stamp.webp';
@@ -20,30 +18,7 @@ import hotelPastranaImg from '/hotel_pastrana.webp';
 import sealBw from '/seal_bw.png';
 
 const App = () => {
-    const [started, setStarted] = useState<boolean>(false);
-    const [play] = useSound(mainTrack, {
-        volume: 1,
-        playbackRate: 1,
-        loop : true
-    });
 
-  useEffect(() => {
-    //music trigger when scrolled
-    const handleScroll = () => {
-      if (!started) {
-        play();
-        setStarted(true);
-        window.removeEventListener("scroll", handleScroll);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-    console.log('hola');
-  }, [play, started]);
 
   const invitationRef = useRef<HTMLDivElement>(null);
   const frontpageRef  = useRef<HTMLDivElement>(null);
@@ -113,7 +88,7 @@ const App = () => {
           }
       });
       },
-      { threshold: 0.5}
+      { threshold: 0.6}
     );
 
       io.observe(frontpage);
@@ -270,6 +245,8 @@ const App = () => {
                 </span>
               </div>
           </div>
+
+          <MusicButton/>
 
     </> 
   );

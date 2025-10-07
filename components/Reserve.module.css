@@ -2,6 +2,7 @@
     position : absolute;
     width : 15rem;
     height : 17rem;
+    margin-top: 2em;
     background-color : #C5AC9E;
     border-radius: 10em 10em 0 0;
     display: flex;
