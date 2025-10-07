@@ -17,6 +17,7 @@ import envelopeImg from '/envelope.webp';
 import stampImg from '/stamp.webp';
 import hotelImperialImg from '/hotel_imperial.webp';
 import hotelPastranaImg from '/hotel_pastrana.webp';
+import sealBw from '/seal_bw.webp';
 
 const App = () => {
     const [started, setStarted] = useState<boolean>(false);
@@ -52,6 +53,7 @@ const App = () => {
   const carouselRef   = useRef<HTMLDivElement>(null);
   const finalRef      = useRef<HTMLDivElement>(null);
   const accommodationRef = useRef<HTMLDivElement>(null);
+  const versicleRef   = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     //calculate view height
@@ -72,6 +74,7 @@ const App = () => {
     const carousel  = carouselRef.current;
     const final     = finalRef.current;
     const accommodation = accommodationRef.current;
+    const versicle  = versicleRef.current;
 
     if (!wrapper    || 
         !invitation || 
@@ -81,7 +84,8 @@ const App = () => {
         !dresscode  ||
         !carousel   ||
         !final      ||
-        !accommodation) return;
+        !accommodation ||
+        !versicle) return;
 
     const io = new IntersectionObserver(
       (entries) => {
@@ -103,11 +107,13 @@ const App = () => {
               wrapper.setAttribute("data-scene", "carousel");
             }else if (entry.target === accommodation){
               wrapper.setAttribute("data-scene", "accommodation");
+            }else if (entry.target === versicle){
+              wrapper.setAttribute("data-scene", "versicle");
             }
           }
       });
       },
-      { threshold: 0.7}
+      { threshold: 0.5}
     );
 
       io.observe(frontpage);
@@ -117,6 +123,7 @@ const App = () => {
       io.observe(dresscode);
       io.observe(carousel);
       io.observe(accommodation);
+      io.observe(versicle);
       io.observe(final);
 
     return () => io.disconnect();
@@ -160,7 +167,10 @@ const App = () => {
                 style={{ backgroundImage: `url(${import.meta.env.BASE_URL}classy_background.webp)` }}/>            
             <div 
                 className={`${appStyle.bgLayer} ${appStyle.bgAccommodation}`} 
-                style={{ backgroundImage: `url(${import.meta.env.BASE_URL}vintage_paper.webp)` }}/>
+                style={{ backgroundImage: `url(${import.meta.env.BASE_URL}vintage_paper.webp)` }}/>            
+            <div 
+                className={`${appStyle.bgLayer} ${appStyle.bgVersicle}`} 
+                style={{ backgroundImage: `url(${import.meta.env.BASE_URL}versicle_background.webp)` }}/>
           </div>
 
           <div ref={frontpageRef} className={appStyle.parallax}>
@@ -188,7 +198,7 @@ const App = () => {
             </div>
           </div>
 
-          <div className={appStyle.parallaxVersicle}>
+          <div ref={versicleRef} className={appStyle.parallaxVersicle}>
     
               <div style={{top:'25%'}} className={appStyle.scrollElements}>
                 <span className={appStyle.countdownHeader}>Cada vez falta menos</span>
@@ -251,9 +261,14 @@ const App = () => {
           </div>
 
           <div ref={finalRef} className={appStyle.parallaxFinal}>
-            <div className={appStyle.scrollElements}> 
-              FINAL
-            </div>
+            <div className={appStyle.versicleFinalPageContainer}>
+
+                <img src={sealBw} alt="Mike & Eli Seal"  className={appStyle.accommodationImg}/>
+
+                <span className={appStyle.versicleFinalPageHeader}>
+                  Mateo 19:6 declara: "Así que ya no son dos, sino una sola carne; por tanto, lo que Dios ha unido, no lo separe el hombre"
+                </span>
+              </div>
           </div>
 
     </> 

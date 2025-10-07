@@ -26,6 +26,7 @@
 .bgWrapper[data-scene="frontpage"] .bgGiftstable { opacity: 0; }
 .bgWrapper[data-scene="frontpage"] .bgCarousel { opacity: 0; }
 .bgWrapper[data-scene="frontpage"] .bgAccommodation { opacity: 0; }
+.bgWrapper[data-scene="frontpage"] .bgVersicle { opacity: 0; }
 
 .bgWrapper[data-scene="invitation"] .bgFrontpage { opacity: 0; }
 .bgWrapper[data-scene="invitation"] .bgInvitation { opacity: 1; }
@@ -35,6 +36,7 @@
 .bgWrapper[data-scene="invitation"] .bgGiftstable { opacity: 0; }
 .bgWrapper[data-scene="invitation"] .bgCarousel { opacity: 0; }
 .bgWrapper[data-scene="invitation"] .bgAccommodation { opacity: 0; }
+.bgWrapper[data-scene="invitation"] .bgVersicle { opacity: 0; }
 
 .bgWrapper[data-scene="itinerary"] .bgFrontpage { opacity: 0; }
 .bgWrapper[data-scene="itinerary"] .bgInvitation { opacity: 0; }
@@ -44,6 +46,7 @@
 .bgWrapper[data-scene="itinerary"] .bgGiftstable { opacity: 0; }
 .bgWrapper[data-scene="itinerary"] .bgCarousel { opacity: 0; }
 .bgWrapper[data-scene="itinerary"] .bgAccommodation { opacity: 0; }
+.bgWrapper[data-scene="itinerary"] .bgVersicle { opacity: 0; }
 
 .bgWrapper[data-scene="dresscode"] .bgFrontpage { opacity: 0; }
 .bgWrapper[data-scene="dresscode"] .bgInvitation { opacity: 0; }
@@ -53,6 +56,7 @@
 .bgWrapper[data-scene="dresscode"] .bgGiftstable { opacity: 0; }
 .bgWrapper[data-scene="dresscode"] .bgCarousel { opacity: 0; }
 .bgWrapper[data-scene="dresscode"] .bgAccommodation { opacity: 0; }
+.bgWrapper[data-scene="dresscode"] .bgVersicle { opacity: 0; }
 
 .bgWrapper[data-scene="final"] .bgFrontpage { opacity: 0; }
 .bgWrapper[data-scene="final"] .bgInvitation { opacity: 0; }
@@ -62,6 +66,7 @@
 .bgWrapper[data-scene="final"] .bgGiftstable { opacity: 0; }
 .bgWrapper[data-scene="final"] .bgCarousel { opacity: 0; }
 .bgWrapper[data-scene="final"] .bgAccommodation { opacity: 0; }
+.bgWrapper[data-scene="final"] .bgVersicle { opacity: 0; }
 
 .bgWrapper[data-scene="giftstable"] .bgFrontpage { opacity: 0; }
 .bgWrapper[data-scene="giftstable"] .bgInvitation { opacity: 0; }
@@ -71,6 +76,7 @@
 .bgWrapper[data-scene="giftstable"] .bgGiftstable { opacity: 1; }
 .bgWrapper[data-scene="giftstable"] .bgCarousel { opacity: 0; }
 .bgWrapper[data-scene="giftstable"] .bgAccommodation { opacity: 0; }
+.bgWrapper[data-scene="giftstable"] .bgVersicle { opacity: 0; }
 
 .bgWrapper[data-scene="carousel"] .bgFrontpage { opacity: 0; }
 .bgWrapper[data-scene="carousel"] .bgInvitation { opacity: 0; }
@@ -80,6 +86,7 @@
 .bgWrapper[data-scene="carousel"] .bgGiftstable { opacity: 0; }
 .bgWrapper[data-scene="carousel"] .bgCarousel { opacity: 1; }
 .bgWrapper[data-scene="carousel"] .bgAccommodation { opacity: 0; }
+.bgWrapper[data-scene="carousel"] .bgVersicle { opacity: 0; }
 
 .bgWrapper[data-scene="accommodation"] .bgFrontpage { opacity: 0; }
 .bgWrapper[data-scene="accommodation"] .bgInvitation { opacity: 0; }
@@ -89,6 +96,17 @@
 .bgWrapper[data-scene="accommodation"] .bgGiftstable { opacity: 0; }
 .bgWrapper[data-scene="accommodation"] .bgCarousel { opacity: 0; }
 .bgWrapper[data-scene="accommodation"] .bgAccommodation { opacity: 1; }
+.bgWrapper[data-scene="accommodation"] .bgVersicle { opacity: 0; }
+
+.bgWrapper[data-scene="versicle"] .bgFrontpage { opacity: 0; }
+.bgWrapper[data-scene="versicle"] .bgInvitation { opacity: 0; }
+.bgWrapper[data-scene="versicle"] .bgItinerary  { opacity: 0; }
+.bgWrapper[data-scene="versicle"] .bgDresscode { opacity: 0;}
+.bgWrapper[data-scene="versicle"] .bgFinal { opacity: 0;}
+.bgWrapper[data-scene="versicle"] .bgGiftstable { opacity: 0; }
+.bgWrapper[data-scene="versicle"] .bgCarousel { opacity: 0; }
+.bgWrapper[data-scene="versicle"] .bgAccommodation { opacity: 0; }
+.bgWrapper[data-scene="versicle"] .bgVersicle { opacity: 1; }
 
 
 .parallax,
@@ -98,7 +116,8 @@
 .parallaxDressCode,
 .parallaxCarousel,
 .parallaxAccommodation,
-.parallaxFinal{
+.parallaxFinal,
+.parallaxVersicle{
   position: relative;
   height: 100dvh;
   height: 100svh;
@@ -108,32 +127,6 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
-}
-
-.parallaxVersicle{
-  position: relative; 
-  background-attachment: fixed; 
-  background-repeat: no-repeat; 
-  background-size: cover; 
-  display: flex; 
-  justify-content: center;
-  background-image: url("/versicle_background.webp"); 
-  background-position: 50%;
-  height: 100dvh; 
-  width: 100dvw;
-  z-index: 0;
-}
-
-.parallaxCarousel{
-  height: 105dvh;
-}
-
-.parallaxGifts{
-  height: 120dvh !important; 
-}
-
-.parallaxAccommodation{
-  height: 100dvh !important;
 }
 
 .scrollText {
@@ -276,6 +269,19 @@
   transition: transform 0.8s ease-out;
 }
 
+.versicleFinalPageContainer{
+  position: absolute;
+  bottom: 15%;
+  width: 80dvw;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+  transition: transform 0.8s ease-out;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .versicleHeader{
   display: flex;
   align-items: center;
@@ -284,6 +290,17 @@
   font-size: 1.3em;
   text-align: center;
   color: white;
+}
+
+.versicleFinalPageHeader{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: texgyrebonum;
+  font-size: 1.3em;
+  text-align: center;
+  color: white;
+  padding-top: 10em;
 }
 
 .scrollConventionalParallax{
