@@ -53,7 +53,7 @@ return(
                             <div className={itinStyle.subtitle}>
                                 Coctél de bienvenida
                                 <br />
-                                4:00 PM
+                                5:00 PM
                             </div>
                         </div>
                     </div>
@@ -64,7 +64,7 @@ return(
                             <div className={itinStyle.subtitle}>
                                 Jardín Rosa Zafiro
                                 <br />
-                                5:00 PM
+                                5:30 PM
                             </div>
                         </div>
                     </div>

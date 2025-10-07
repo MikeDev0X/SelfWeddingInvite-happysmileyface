@@ -167,8 +167,8 @@
 }
 
 .scrollElCarousel{
-  position: absolute;
-  top: 10%;
+  position: absolute; 
+  top: 0%;
   left: 50%;
   transform: translateX(-50%);
   
@@ -346,5 +346,37 @@
 
   .scrollReserve{
     bottom: 25%;
+  }
+}
+
+@media (max-width: 2399px) and (max-height: 1799px) {
+  .invitationImg1{
+    width:12em;
+    height: 18em;
+    top: 30%;
+    left: 40%;
+    transform: translate(-65%, -50%);
+    z-index: 1;
+  }
+  .invitationImg2{
+    width: 4em;
+    height: auto;
+    top: 30%;
+    left: 40%;
+    transform: translate(-170%, -140%);
+    z-index: 3;
+  }
+  .invitationImg3{
+    width: 16em;
+    height: 27em;
+    top: 30%;
+    left: 40%;
+    transform: translate(-37%, -15%);
+    z-index: 2;
+  }
+  .scrollElCarousel{
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }

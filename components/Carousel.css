@@ -83,3 +83,11 @@
 .arrow--disabled {
   fill: rgba(255, 255, 255, 0.5);
 }
+
+@media (max-width: 2399px) and (max-height: 1799px) {
+
+  [class^="number-slide"],
+  [class*=" number-slide"] {
+    height: 14em;
+  }
+}

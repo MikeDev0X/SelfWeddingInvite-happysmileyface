@@ -33,7 +33,7 @@ const Invitation = () =>{
                 </span>
 
                 <span className={invitStyle.text} style={{fontSize: '0.7em', width:'19.5em', paddingTop: '0.6em'}}>
-                    EN PUNTO DE LAS 16:00 HRS EN EL JARDÍN ROSA ZAFIRO
+                    EN PUNTO DE LAS 17:00 HRS EN EL JARDÍN ROSA ZAFIRO
                     <br /><br />
                 </span>
                 
