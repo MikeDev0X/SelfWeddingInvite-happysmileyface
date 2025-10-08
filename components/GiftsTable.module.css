@@ -89,7 +89,7 @@
     }
 }
 
-@media (max-height: 505px) {
+@media (max-height: 625px) {
     .mainContainer{
         width: 16rem;
         height: 30rem;

@@ -98,7 +98,7 @@
 }
 
 
-@media (max-width: 359px), (max-height: 535px) {
+@media (max-width: 359px), (max-height: 675px) {
   .navigation-wrapper {
     position: relative;
     height: 12rem;

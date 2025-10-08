@@ -33,7 +33,7 @@
     font-family: texgyrebonum;
 }
 
-@media (max-width: 359px), (max-height: 505px) {
+@media (max-width: 359px), (max-height: 625px) {
     .mainContainer{
         width: 18rem;
         height: 15rem;

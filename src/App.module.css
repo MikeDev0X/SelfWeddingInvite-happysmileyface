@@ -413,3 +413,9 @@
   }
 
 }
+
+@media (max-height: 635px){
+  .versicleFinalPageHeader{
+    padding-top: 45%;
+  }
+}
