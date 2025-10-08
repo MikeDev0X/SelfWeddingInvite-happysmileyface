@@ -32,3 +32,19 @@
     width: 80%;
     font-family: texgyrebonum;
 }
+
+@media (max-width: 359px), (max-height: 505px) {
+    .mainContainer{
+        width: 18rem;
+        height: 15rem;
+    }
+
+    .mainTitle{
+        font-size: 1.5em;
+    }
+
+    .subtitle{
+        font-size: 0.8em;
+    }
+
+}

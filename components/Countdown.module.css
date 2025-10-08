@@ -29,3 +29,9 @@
   font-size: 0.7em;
   text-shadow: 2px 2px 8px rgba(0,0,0,0.2);
 }
+
+@media (max-width: 359px) {
+    .mainContainer{
+        width: 100%;
+    }
+}

@@ -210,16 +210,16 @@ const App = () => {
           <div ref={accommodationRef} className={appStyle.parallaxAccommodation}>
             <div className={appStyle.scrollAccommodation}>
               <span className={appStyle.accommodationItalics}>Recomendaciones</span>
-              <span className={appStyle.accommodationText} style={{fontSize: '2em'}}>Hospedaje</span>
+              <span className={appStyle.accommodationText2}>Hospedaje</span>
 
               <img src={hotelImperialImg} alt="Hotel Imperial Jojutla"  className={appStyle.accommodationImg} onClick={() => openInMaps('imperial')}/>
               <br />
-              <span className={appStyle.accommodationText} style={{fontSize: '1em', fontWeight: 'bold'}}>Hotel Imperial Jojutla</span>
+              <span className={appStyle.accommodationText1} style={{fontWeight: 'bold'}}>Hotel Imperial Jojutla</span>
               <a href="http://hotelimperialjojutla.com.mx/" target="_blank" className={appStyle.accommodationText} style={{fontSize: '1em', fontStyle: 'italic', textDecoration:'underline'}}>Sitio web</a>
               
               <img src={hotelPastranaImg} alt="Hotel La Pastrana Jojutla"  className={appStyle.accommodationImg} onClick={() => openInMaps('pastrana')}/>
               <br />
-              <span className={appStyle.accommodationText} style={{fontSize: '1em', fontWeight: 'bold'}}>Hotel La Pastrana Jojutla</span>
+              <span className={appStyle.accommodationText1} style={{fontWeight: 'bold'}}>Hotel La Pastrana Jojutla</span>
               <a href="tel:+52 7343423085" target="_blank" className={appStyle.accommodationText} style={{fontSize: '1em', fontStyle: 'italic', textDecoration:'underline'}}>Contacto telefónico</a>
 
 
@@ -238,7 +238,7 @@ const App = () => {
           <div ref={finalRef} className={appStyle.parallaxFinal}>
             <div className={appStyle.versicleFinalPageContainer}>
 
-                <img src={sealBw} alt="Mike & Eli Seal"  className={appStyle.accommodationImg}/>
+                <img src={sealBw} alt="Mike & Eli Seal"  className={appStyle.sealImg}/>
 
                 <span className={appStyle.versicleFinalPageHeader}>
                   Mateo 19:6 declara: "Así que ya no son dos, sino una sola carne; por tanto, lo que Dios ha unido, no lo separe el hombre"

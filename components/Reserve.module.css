@@ -68,3 +68,18 @@
     font-family: texgyrebonum;
   }
 }
+
+@media (max-width: 359px), (max-height: 535px) {
+  .mainContainer{
+      width : 13rem;
+      height : 14rem;
+  }
+
+  .mainTitle{
+    font-size: 1.3em;
+  }
+
+  .subtitle{
+      font-size: 0.6em;
+  }
+}

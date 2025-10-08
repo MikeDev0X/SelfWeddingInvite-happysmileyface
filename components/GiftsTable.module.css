@@ -55,3 +55,58 @@
     font-size: 0.5em;
     font-family: texgyrebonum;
 }
+
+.giftImgStyle{
+    width: 5em;
+    padding-top: 0.5em;
+}
+
+.envelopeImgStyle{
+    width: 4em;
+    padding-bottom: 0.5em;
+    padding-top: 0.5em;
+}
+
+@media (max-width: 359px) {
+    .mainContainer{
+        width: 18rem;
+        height: 34rem;
+    }
+
+    .subtitle{
+        font-size: 0.75em;
+    }
+
+    .giftImgStyle{
+        width: 4em;
+        padding-top: 0.5em;
+    }
+
+    .envelopeImgStyle{
+        width: 3em;
+        padding-bottom: 0.5em;
+        padding-top: 0.5em;
+    }
+}
+
+@media (max-height: 505px) {
+    .mainContainer{
+        width: 16rem;
+        height: 30rem;
+    }
+
+    .subtitle{
+        font-size: 0.65em;
+    }
+
+    .giftImgStyle{
+        width: 4em;
+        padding-top: 0.5em;
+    }
+
+    .envelopeImgStyle{
+        width: 3em;
+        padding-bottom: 0.5em;
+        padding-top: 0.5em;
+    }
+}

@@ -29,7 +29,7 @@ const GiftsTable = () =>{
                 <span className={giftStyle.subtitle} style={{fontWeight:'bold'}}>¡Lluvia de sobres!</span>
                     <img   src={envelopeMoneyImg} 
                            alt="env money image" 
-                           style={{width:'4em', paddingTop: '0.5em', paddingBottom: '0.5em'}}  
+                           className={giftStyle.envelopeImgStyle} 
                             />
                 <span className={giftStyle.subtitle}>La tradición de dar dinero en efectivo el día del evento</span>
                     <br />
@@ -46,7 +46,7 @@ const GiftsTable = () =>{
                 </div>
                 <img    src={giftImage}
                         alt="gift image" 
-                        style={{width:'5em', paddingTop: '0.5em'}}/>
+                        className={giftStyle.giftImgStyle}/>
             
             </div>
         </>

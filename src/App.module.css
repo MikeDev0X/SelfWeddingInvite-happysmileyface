@@ -244,10 +244,16 @@
 }
 
 .accommodationImg{
-  border-radius: 2.7em;
   padding-top: 1em;
   width: 10em;
   height: 10em;
+}
+
+.sealImg{
+  border-radius: 2.7em;
+  margin-top: 3em;
+  width: 9em;
+  height: 9em;
 }
 
 .countdownHeader{
@@ -300,7 +306,7 @@
   font-size: 1.3em;
   text-align: center;
   color: white;
-  padding-top: 10em;
+  padding-top: 65%;
 }
 
 .scrollConventionalParallax{
@@ -313,10 +319,21 @@
   justify-content: center;
 }
 
-.accommodationText{
+.accommodationText1{
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 1em;
+  font-family: texgyrebum;
+  text-align: center;
+  color: #65563e;
+}
+
+.accommodationText2{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2em;
   font-family: texgyrebum;
   text-align: center;
   color: #65563e;
@@ -339,17 +356,7 @@
   }
 }
 
-@media (min-width: 769px) {
-  .scrollElCarousel{
-    top: 10%;
-  }
-
-  .scrollReserve{
-    bottom: 25%;
-  }
-}
-
-@media (max-width: 2399px) and (max-height: 1799px) {
+@media (max-width: 2399px){
   .invitationImg1{
     width:12em;
     height: 18em;
@@ -379,4 +386,30 @@
     left: 50%;
     transform: translateX(-50%);
   }
+  .countdownHeader{
+    font-size: 1.7em;
+  }
+}
+
+@media (max-width: 359px), (max-height: 505px) {
+  .invitationImg1{
+    transform: translate(-60%, -50%);
+  }
+  .invitationImg3{
+    transform: translate(-30%, -15%);
+  }
+
+  .accommodationImg{
+    width: 9em;
+    height: 9em;
+  }
+
+  .accommodationText2{
+    font-size: 1.5em;
+  }
+
+  .accommodationItalics{
+    font-size: 2em;
+  }
+
 }
