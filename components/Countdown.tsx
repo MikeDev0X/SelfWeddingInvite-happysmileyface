@@ -17,7 +17,7 @@ const getTimeHours = (time: number) => ((time % daySeconds) / hourSeconds) | 0;
 const getTimeDays = (time: number) => (time / daySeconds) | 0;
 
 const Countdown = () =>{
-    const targetDate = new Date("2025-12-14T16:00:00");
+    const targetDate = new Date("2025-12-14T17:00:00");
     const now = new Date();
     const deltaSeconds = Math.floor((targetDate.getTime() - now.getTime()) / 1000);
 

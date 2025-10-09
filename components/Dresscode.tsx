@@ -14,6 +14,7 @@ const Dresscode = () =>{
                 </div>
                 <span className={dressStyle.mainTitle}>Dress code</span>
                 <span className={dressStyle.subtitle}>Formal. Queremos que te veas increíble, no incómodo. La corbata es opcional.</span>
+                <span className={dressStyle.subtitle}>Blanco reservado para la novia.</span>
             </div>
         
         </>

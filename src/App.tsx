@@ -15,7 +15,7 @@ import envelopeImg from '/envelope.webp';
 import stampImg from '/stamp.webp';
 import hotelImperialImg from '/hotel_imperial.webp';
 import hotelPastranaImg from '/hotel_pastrana.webp';
-import sealBw from '/seal_bw.png';
+import sealBw from '/seal_bw.webp';
 
 const App = () => {
 
@@ -139,7 +139,7 @@ const App = () => {
                 style={{ backgroundImage: `url(${import.meta.env.BASE_URL}classy_background.webp)` }}/>            
             <div 
                 className={`${appStyle.bgLayer} ${appStyle.bgAccommodation}`} 
-                style={{ backgroundImage: `url(${import.meta.env.BASE_URL}vintage_paper.webp)` }}/>            
+                style={{ backgroundImage: `url(${import.meta.env.BASE_URL}accommodation_background.webp)` }}/>            
             <div 
                 className={`${appStyle.bgLayer} ${appStyle.bgVersicle}`} 
                 style={{ backgroundImage: `url(${import.meta.env.BASE_URL}versicle_background.webp)` }}/>
@@ -215,12 +215,12 @@ const App = () => {
               <img src={hotelImperialImg} alt="Hotel Imperial Jojutla"  className={appStyle.accommodationImg} onClick={() => openInMaps('imperial')}/>
               <br />
               <span className={appStyle.accommodationText1} style={{fontWeight: 'bold'}}>Hotel Imperial Jojutla</span>
-              <a href="http://hotelimperialjojutla.com.mx/" target="_blank" className={appStyle.accommodationText} style={{fontSize: '1em', fontStyle: 'italic', textDecoration:'underline'}}>Sitio web</a>
+              <a href="http://hotelimperialjojutla.com.mx/" target="_blank" className={appStyle.accommodationText1} style={{fontSize: '1em', fontStyle: 'italic', textDecoration:'underline'}}>Sitio web</a>
               
               <img src={hotelPastranaImg} alt="Hotel La Pastrana Jojutla"  className={appStyle.accommodationImg} onClick={() => openInMaps('pastrana')}/>
               <br />
               <span className={appStyle.accommodationText1} style={{fontWeight: 'bold'}}>Hotel La Pastrana Jojutla</span>
-              <a href="tel:+52 7343423085" target="_blank" className={appStyle.accommodationText} style={{fontSize: '1em', fontStyle: 'italic', textDecoration:'underline'}}>Contacto telefónico</a>
+              <a href="tel:+52 7343423085" target="_blank" className={appStyle.accommodationText1} style={{fontSize: '1em', fontStyle: 'italic', textDecoration:'underline'}}>Contacto telefónico</a>
 
 
             </div>
