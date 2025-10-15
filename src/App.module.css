@@ -121,12 +121,16 @@
   position: relative;
   height: 100dvh;
   height: 100svh;
-  height: calc(var(--real-vh, 1vh) * 100);
   width: 100dvw;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
+}
+
+.parallaxFinal{
+  height: 102dvh;
+  height: 102svh;
 }
 
 .scrollText {
