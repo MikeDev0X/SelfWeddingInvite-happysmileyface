@@ -1,12 +1,12 @@
 import giftStyle from './GiftsTable.module.css';
-import amazonImg from '/amazon_logo.webp';
+import searsImg from '/sears_logo.webp';
 import envelopeMoneyImg from '/envelope_money.webp';
 import giftImage    from '/gift.webp';
 
 const GiftsTable = () =>{
 
     const handleClick = () =>{
-        window.open('https://www.amazon.com.mx/wedding/share/miki_eli_gift_table', 
+        window.open('https://www.sears.com.mx/Mesa-de-Regalos/214701/te-invito-a-mi-boda-miguel-elisua', 
             '_blank', 
             'noopener,noreferrer');
     }
@@ -15,7 +15,7 @@ const GiftsTable = () =>{
         <>
             <div className={giftStyle.mainContainer}>
 
-                <span style={{fontSize:'1.7em', paddingBottom:'0.5em'}} className={giftStyle.mainTitle}>Mesa de regalos</span>
+                <span style={{paddingBottom:'0.5em'}} className={giftStyle.mainTitle}>Mesa de regalos</span>
                 <span className={giftStyle.subtitle}>
                     Nuestro mayor regalo es contar con su compañia, 
                     sin embargo, 
@@ -33,10 +33,10 @@ const GiftsTable = () =>{
                             />
                 <span className={giftStyle.subtitle}>La tradición de dar dinero en efectivo el día del evento</span>
                     <br />
-                <span className={giftStyle.subtitle} style={{fontWeight:'bold'}}>Mesa de regalos de Amazon</span>
+                <span className={giftStyle.subtitle} style={{fontWeight:'bold'}}>Mesa de regalos de SEARS</span>
 
                 <div className={giftStyle.amazonContainer}>
-                    <img   src={amazonImg} 
+                    <img   src={searsImg} 
                            alt="amazon image" 
                            style={{width:'4em'}}  
                             />

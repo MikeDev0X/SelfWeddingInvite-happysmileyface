@@ -307,7 +307,7 @@
   font-size: 1.3em;
   text-align: center;
   color: white;
-  padding-top: 65%;
+  padding-top: 10em;
 }
 
 .scrollConventionalParallax{
@@ -393,7 +393,7 @@
   }
 }
 
-@media (max-width: 359px), (max-height: 505px) {
+@media (max-width: 359px), (max-height: 545px) {
   .invitationImg1{
     transform: translate(-60%, -50%);
   }
@@ -416,8 +416,38 @@
 
 }
 
-@media (max-height: 555px){
-  .versicleFinalPageHeader{
-    padding-top: 45%;
+@media (max-width: 359px), (max-height: 600px) {
+  .accommodationImg{
+    width: 9em;
+    height: 9em;
   }
+
+  .accommodationText2{
+    font-size: 1.5em;
+  }
+
+  .accommodationItalics{
+    font-size: 2em;
+  }
+
+  .versicleFinalPageHeader{
+    padding-top: 6em;
+  }
+
+}
+
+@media (max-height: 560px) {
+  .accommodationImg{
+    width: 7em;
+    height: 7em;
+  }
+
+  .accommodationText2{
+    font-size: 1.3em;
+  }
+
+  .accommodationItalics{
+    font-size: 1.7em;
+  }
+
 }

@@ -136,7 +136,7 @@ const App = () => {
                 style={{ backgroundImage: `url(${import.meta.env.BASE_URL}itinerary_background.webp)` }}/>
             <div 
                 className={`${appStyle.bgLayer} ${appStyle.bgCarousel}`} 
-                style={{ backgroundImage: `url(${import.meta.env.BASE_URL}classy_background.webp)` }}/>            
+                style={{ backgroundImage: `url(${import.meta.env.BASE_URL}carousel_background.webp)` }}/>            
             <div 
                 className={`${appStyle.bgLayer} ${appStyle.bgAccommodation}`} 
                 style={{ backgroundImage: `url(${import.meta.env.BASE_URL}accommodation_background.webp)` }}/>            

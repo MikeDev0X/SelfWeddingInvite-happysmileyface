@@ -11,6 +11,7 @@ const MusicButton = () =>{
     const [started, setStarted] = useState(false);
     const [volume, setVolume] = useState(muteImg);
 
+
     const [play, { sound }] = useSound(mainTrack, {
         volume: 1,
         playbackRate: 1,
@@ -18,24 +19,23 @@ const MusicButton = () =>{
     });
 
   const handleClick = () => {
-    if (volume === muteImg) {
-        if(started === false){
-            setStarted(true);
-            play();
-        }
-        else{
-            unmuteSound();
-        }
+    
+    if(!started){
+        play();
+        setStarted(true);
         setVolume(volumeImg);
-    } 
-    else {
-        setVolume(muteImg);
-        muteSound();
+    }else{
+        if(volume === muteImg){
+            sound?.mute(false); 
+            setVolume(volumeImg);
+        }else{
+            sound?.mute(true); 
+            setVolume(muteImg);
+        }
     }
   };
 
-    const muteSound = () => sound?.mute(true);
-    const unmuteSound = () => sound?.mute(false);
+  console.log('Si lees esto te amo <3');
 
     return(
         <>

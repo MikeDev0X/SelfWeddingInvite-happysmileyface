@@ -42,3 +42,19 @@
         font-size: 0.8em;
     }
 }
+
+@media (max-height: 595px) {
+    .mainContainer{
+        width: 17rem;
+        height: 14rem;
+    }
+
+    .mainTitle{
+        font-size: 1.3em;
+    }
+
+    .subtitle{
+        font-size: 0.7em;
+    }
+
+}

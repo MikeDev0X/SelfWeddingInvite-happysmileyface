@@ -33,7 +33,7 @@
     padding-top: 0.6em;
 }
 
-@media (max-width: 359px) {
+@media (max-width: 359px), (max-height: 545px) {
     .mainContainer{
         width: 16rem;
         height: 25rem;

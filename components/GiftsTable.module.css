@@ -18,6 +18,7 @@
     width: 80%;
     text-align : center;
     font-family: newiconscript;
+    font-size: 1.7em;
 }
 
 .subtitle{
@@ -94,7 +95,12 @@
         width: 16rem;
         height: 30rem;
     }
-
+    .mainTitle{
+        width: 80%;
+        text-align : center;
+        font-family: newiconscript;
+        font-size: 1.4em;
+    }
     .subtitle{
         font-size: 0.65em;
     }

@@ -115,3 +115,21 @@
   }
 
 }
+
+@media (max-height: 570px) {
+  .navigation-wrapper {
+    position: relative;
+    height: 10rem;
+    width: 14rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1em;
+  }
+
+  [class^="number-slide"],
+  [class*=" number-slide"] {
+    height: 9em;
+  }
+
+}
