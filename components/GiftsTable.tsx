@@ -7,8 +7,7 @@ const GiftsTable = () =>{
 
     const handleClick = () =>{
         window.open('https://www.sears.com.mx/Mesa-de-Regalos/214701/te-invito-a-mi-boda-miguel-elisua', 
-            '_blank', 
-            'noopener,noreferrer');
+            '_blank');
     }
 
     return(
@@ -40,7 +39,7 @@ const GiftsTable = () =>{
                            alt="amazon image" 
                            style={{width:'4em'}}  
                             />
-                    <div className={giftStyle.amazonButton} onClick={()=> handleClick()}>
+                    <div className={giftStyle.amazonButton} onClick={handleClick}>
                         <span className={giftStyle.buttonText}>Ir a Mesa</span>
                     </div>
                 </div>

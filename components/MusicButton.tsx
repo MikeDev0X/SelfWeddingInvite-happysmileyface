@@ -6,6 +6,7 @@ import muteImg from '/mute.webp';
 import useSound from "use-sound";
 import mainTrack from '../src/assets/soundtracks/mainSoundtrack.mp3';
 import { useState } from 'react';
+import { Howler } from "howler";
 
 const MusicButton = () =>{
     const [started, setStarted] = useState(false);
@@ -18,8 +19,12 @@ const MusicButton = () =>{
         loop: true,
     });
 
-  const handleClick = () => {
+  const handleClick = async () => {
     
+    if (Howler.ctx.state === "suspended") {
+      await Howler.ctx.resume();
+    }
+
     if(!started){
         play();
         setStarted(true);
