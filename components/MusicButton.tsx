@@ -3,9 +3,10 @@ import MusicButtonStyle from './MusicButton.module.css';
 import volumeImg from '/volume.webp';
 import muteImg from '/mute.webp';
 //Sound
+//import useSound from "use-sound";
 import mainTrack from '../src/assets/soundtracks/mainSoundtrack.mp3';
 import { useState } from 'react';
-import { Howl, Howler } from "howler";
+import { Howl } from "howler";
 
 type HowlInstance = InstanceType<typeof Howl>;
 
@@ -13,11 +14,16 @@ const MusicButton = () =>{
     const [started, setStarted] = useState(false);
     const [volume, setVolume] = useState(muteImg);
     const [sound, setSound] = useState<HowlInstance | null>(null);
+    //const [trigger, setTrigger] = useState<number>(false);
 
-  const handleClick = () => {
-    
-    if (Howler.ctx.state === "suspended") {
-        Howler.ctx.resume();
+  const handleClick = async () => {
+/*     if(countTrigger < 1 && !started){
+        alert()
+    } */
+    const isIOS = () => /iPad|iPhone|iPod/.test(navigator.userAgent);
+
+    if(!started && sound === null && isIOS()){
+        alert("Asegúrate de que tu dispositivo no esté en modo silencio para escuchar la invitación");
     }
 
     if(!started){
@@ -25,8 +31,10 @@ const MusicButton = () =>{
         src: [mainTrack],
         volume: 1,
         loop: true,
-        html5: true,
+        html5: false,
       });
+
+        console.log('Si lees esto te amo <3');
 
         newSound.play();
         setSound(newSound);
@@ -44,15 +52,16 @@ const MusicButton = () =>{
     }
   };
 
-  console.log('Si lees esto te amo <3');
-
     return(
         <>
+            <div className={MusicButtonStyle.mainContainer}>
+                
             <div className={MusicButtonStyle.floatContainer} onClick={() => handleClick()}>
                 <img 
                     src={volume} 
                     alt='Music Button' 
                     style={{width : `${volume === muteImg ? '65%' : '57%'}`}} />
+            </div>
             </div>
         
         </>

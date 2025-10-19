@@ -1,8 +1,30 @@
-.floatContainer{
+.mainContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+
     position: fixed;
     bottom: 15px;
     right: 15px;
     
+}
+
+.iosnotification{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 14em;
+    padding: 0.2em;
+
+    font-size: 0.6em;
+    text-align: center;
+    border-radius: 1em;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.floatContainer{
     width: 2.2em;
     height: 2.2em;
 
@@ -20,4 +42,6 @@
     align-items: center;
 
     cursor: pointer;
+
+    margin-left: 0.5em;
 }
