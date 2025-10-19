@@ -3,7 +3,6 @@ import MusicButtonStyle from './MusicButton.module.css';
 import volumeImg from '/volume.webp';
 import muteImg from '/mute.webp';
 //Sound
-//import useSound from "use-sound";
 import mainTrack from '../src/assets/soundtracks/mainSoundtrack.mp3';
 import { useState } from 'react';
 import { Howl, Howler } from "howler";
@@ -15,16 +14,10 @@ const MusicButton = () =>{
     const [volume, setVolume] = useState(muteImg);
     const [sound, setSound] = useState<HowlInstance | null>(null);
 
-/*     const [play, { sound }] = useSound(mainTrack, {
-        volume: 1,
-        playbackRate: 1,
-        loop: true,
-    }); */
-
-  const handleClick = async () => {
+  const handleClick = () => {
     
     if (Howler.ctx.state === "suspended") {
-      await Howler.ctx.resume();
+        Howler.ctx.resume();
     }
 
     if(!started){
@@ -32,6 +25,7 @@ const MusicButton = () =>{
         src: [mainTrack],
         volume: 1,
         loop: true,
+        html5: true,
       });
 
         newSound.play();
